@@ -35,11 +35,11 @@ const HeroSection = () => {
             variants={itemVariants}
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-['Courier_Prime']">
-              <span className="text-white">Мы Создаем</span>
+              <span className="text-white">Создаем</span>
               <span className="text-[#00FF41] block leading-tight"> Цифровые Впечатления</span>
             </h2>
             <p className="text-gray-300 text-lg md:text-xl mb-8 leading-relaxed font-['Roboto_Mono']">
-              Специализируемся на передовых веб-решениях, интерактивных проектах и цифровой трансформации для прогрессивных компаний.
+              Передовые решения и цифровая трансформация для прогрессивных компаний.
             </p>
             <div className="flex flex-wrap gap-4">
               <a 
