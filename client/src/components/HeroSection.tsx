@@ -81,7 +81,7 @@ const HeroSection = () => {
                 </div>
                 <div className="relative">
                   <div className="text-[#00FF41] text-sm mb-2 font-['Roboto_Mono']">// РЕШЕНИЯ НА БАЗЕ ИИ</div>
-                  <h3 className="text-white text-2xl mb-4 font-bold font-['Courier_Prime']">Преимущества MONO</h3>
+                  <h3 className="text-white text-2xl mb-4 font-bold font-['Courier_Prime']">Преимущества <span className="text-[#00FF41]">MONO</span></h3>
                   <ul className="text-gray-300 space-y-3">
                     <li className="flex items-start">
                       <span className="text-[#00FF41] mr-2">{'>'}</span> 
@@ -89,11 +89,11 @@ const HeroSection = () => {
                     </li>
                     <li className="flex items-start">
                       <span className="text-[#00FF41] mr-2">{'>'}</span> 
-                      <span>Адаптивный и интуитивный дизайн</span>
+                      <span>Адаптивный и креативный дизайн</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-[#00FF41] mr-2">{'>'}</span> 
-                      <span>Разработка с фокусом на производительность</span>
+                      <span>Разработка с фокусом на решение задач</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-[#00FF41] mr-2">{'>'}</span> 
