@@ -38,7 +38,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <motion.h1 
-              className="text-[#00FF41] text-2xl md:text-3xl font-bold font-['Courier_Prime']"
+              className="text-[#00FF41] text-xl md:text-3xl font-bold font-['Courier_Prime']"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}

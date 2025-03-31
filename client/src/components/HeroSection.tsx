@@ -65,7 +65,7 @@ const HeroSection = () => {
             <div className="relative rounded-lg overflow-hidden border border-[#00FF41] hover:border-[#00FFFF] transition-colors group">
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-[#00FF41]/10 via-transparent to-[#00FF41]/10 transition-opacity duration-700"></div>
               <div className="bg-[#0D0208]/75 backdrop-blur-md rounded-lg p-6 md:p-10">
-                <div className="grid grid-cols-4 gap-3 mb-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
                   <div className="h-16 flex items-center justify-center border border-[#00FF41] text-[#00FF41]">
                     <Code className="h-8 w-8" />
                   </div>

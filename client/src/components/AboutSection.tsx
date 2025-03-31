@@ -43,7 +43,7 @@ const AboutSection = () => {
               </div>
             </div>
             <div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="bg-[#0D0208] p-6 rounded-lg border border-[#008F11] hover:border-[#00FF41] transition-all">
                   <div className="text-4xl text-[#00FF41] mb-2">12+</div>
                   <div className="text-white font-bold mb-1">Лет опыта</div>
