@@ -35,25 +35,25 @@ const HeroSection = () => {
             variants={itemVariants}
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-['Courier_Prime']">
-              <span className="text-white">We Create</span>
-              <span className="text-[#00FF41] block leading-tight"> Digital Experiences</span>
+              <span className="text-white">Мы Создаем</span>
+              <span className="text-[#00FF41] block leading-tight"> Цифровые Впечатления</span>
             </h2>
             <p className="text-gray-300 text-lg md:text-xl mb-8 leading-relaxed font-['Roboto_Mono']">
-              Specializing in cutting-edge web solutions, interactive experiences, and digital transformation for forward-thinking businesses.
+              Специализируемся на передовых веб-решениях, интерактивных проектах и цифровой трансформации для прогрессивных компаний.
             </p>
             <div className="flex flex-wrap gap-4">
               <a 
                 href="#services" 
                 className="relative overflow-hidden bg-[#00FF41] text-[#0D0208] px-6 py-3 rounded font-bold transition-all hover:bg-[#008F11] hover:text-white"
               >
-                <span className="relative z-10">Our Services</span>
+                <span className="relative z-10">Наши Услуги</span>
                 <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent z-0 transition-all duration-700 hover:left-[100%]"></span>
               </a>
               <a 
                 href="#portfolio" 
                 className="border-2 border-[#00FF41] text-[#00FF41] px-6 py-3 rounded font-bold transition-all hover:bg-[#0D0208] hover:text-[#00FFFF] hover:border-[#00FFFF]"
               >
-                View Work
+                Посмотреть Работы
               </a>
             </div>
           </motion.div>
@@ -80,24 +80,24 @@ const HeroSection = () => {
                   </div>
                 </div>
                 <div className="relative">
-                  <div className="text-[#00FF41] text-sm mb-2 font-['Roboto_Mono']">// AI-DRIVEN SOLUTIONS</div>
-                  <h3 className="text-white text-2xl mb-4 font-bold font-['Courier_Prime']">The MONO Advantage</h3>
+                  <div className="text-[#00FF41] text-sm mb-2 font-['Roboto_Mono']">// РЕШЕНИЯ НА БАЗЕ ИИ</div>
+                  <h3 className="text-white text-2xl mb-4 font-bold font-['Courier_Prime']">Преимущества MONO</h3>
                   <ul className="text-gray-300 space-y-3">
                     <li className="flex items-start">
                       <span className="text-[#00FF41] mr-2">{'>'}</span> 
-                      <span>Cutting-edge technology integration</span>
+                      <span>Интеграция передовых технологий</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-[#00FF41] mr-2">{'>'}</span> 
-                      <span>Responsive and intuitive designs</span>
+                      <span>Адаптивный и интуитивный дизайн</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-[#00FF41] mr-2">{'>'}</span> 
-                      <span>Performance-focused development</span>
+                      <span>Разработка с фокусом на производительность</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-[#00FF41] mr-2">{'>'}</span> 
-                      <span>Digital transformation expertise</span>
+                      <span>Экспертиза в цифровой трансформации</span>
                     </li>
                   </ul>
                 </div>

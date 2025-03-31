@@ -20,10 +20,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
 const contactFormSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters" }),
-  email: z.string().email({ message: "Please enter a valid email address" }),
-  subject: z.string().min(2, { message: "Subject must be at least 2 characters" }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters" }),
+  name: z.string().min(2, { message: "Имя должно содержать не менее 2 символов" }),
+  email: z.string().email({ message: "Пожалуйста, введите действительный email адрес" }),
+  subject: z.string().min(2, { message: "Тема должна содержать не менее 2 символов" }),
+  message: z.string().min(10, { message: "Сообщение должно содержать не менее 10 символов" }),
 });
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
@@ -47,16 +47,16 @@ const ContactSection = () => {
     },
     onSuccess: () => {
       toast({
-        title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
+        title: "Сообщение отправлено!",
+        description: "Мы свяжемся с вами в ближайшее время.",
         variant: "default",
       });
       form.reset();
     },
     onError: (error) => {
       toast({
-        title: "Error sending message",
-        description: error.message || "Please try again later.",
+        title: "Ошибка отправки сообщения",
+        description: error.message || "Пожалуйста, попробуйте позже.",
         variant: "destructive",
       });
     },
@@ -69,8 +69,8 @@ const ContactSection = () => {
   const contactInfo = [
     {
       icon: <MapPinIcon className="h-5 w-5" />,
-      title: "Location",
-      details: ["123 Tech Boulevard, Digital District", "San Francisco, CA 94107"],
+      title: "Адрес",
+      details: ["123 Технологический Бульвар, Цифровой район", "Сан-Франциско, CA 94107"],
     },
     {
       icon: <MailIcon className="h-5 w-5" />,
@@ -79,13 +79,13 @@ const ContactSection = () => {
     },
     {
       icon: <PhoneIcon className="h-5 w-5" />,
-      title: "Phone",
+      title: "Телефон",
       details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
     },
     {
       icon: <ClockIcon className="h-5 w-5" />,
-      title: "Working Hours",
-      details: ["Monday - Friday: 9am - 6pm", "Saturday: 10am - 4pm"],
+      title: "Рабочие Часы",
+      details: ["Понедельник - Пятница: 9:00 - 18:00", "Суббота: 10:00 - 16:00"],
     },
   ];
   
@@ -99,9 +99,9 @@ const ContactSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="text-[#00FF41] text-sm mb-2 font-['Roboto_Mono']">// GET IN TOUCH</div>
+          <div className="text-[#00FF41] text-sm mb-2 font-['Roboto_Mono']">// СВЯЖИТЕСЬ С НАМИ</div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-['Courier_Prime']">
-            Contact <span className="text-[#00FF41]">Us</span>
+            Связаться <span className="text-[#00FF41]">С Нами</span>
           </h2>
           <div className="w-16 h-1 bg-[#00FF41] mx-auto"></div>
         </motion.div>
@@ -115,7 +115,7 @@ const ContactSection = () => {
         >
           <div className="grid md:grid-cols-2 gap-10 items-start">
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-white">Send Us a Message</h3>
+              <h3 className="text-2xl font-bold mb-6 text-white">Отправьте Нам Сообщение</h3>
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -124,10 +124,10 @@ const ContactSection = () => {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-white">Name</FormLabel>
+                          <FormLabel className="text-white">Имя</FormLabel>
                           <FormControl>
                             <Input 
-                              placeholder="Your Name" 
+                              placeholder="Ваше имя" 
                               {...field} 
                               className="bg-[#0D0208] border-[#008F11] focus:border-[#00FF41] text-white"
                             />
@@ -144,7 +144,7 @@ const ContactSection = () => {
                           <FormLabel className="text-white">Email</FormLabel>
                           <FormControl>
                             <Input 
-                              placeholder="your@email.com" 
+                              placeholder="ваш@email.com" 
                               {...field} 
                               className="bg-[#0D0208] border-[#008F11] focus:border-[#00FF41] text-white"
                             />
@@ -159,10 +159,10 @@ const ContactSection = () => {
                     name="subject"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white">Subject</FormLabel>
+                        <FormLabel className="text-white">Тема</FormLabel>
                         <FormControl>
                           <Input 
-                            placeholder="Subject" 
+                            placeholder="Тема сообщения" 
                             {...field} 
                             className="bg-[#0D0208] border-[#008F11] focus:border-[#00FF41] text-white"
                           />
@@ -176,10 +176,10 @@ const ContactSection = () => {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white">Message</FormLabel>
+                        <FormLabel className="text-white">Сообщение</FormLabel>
                         <FormControl>
                           <Textarea 
-                            placeholder="Your message..." 
+                            placeholder="Ваше сообщение..." 
                             rows={6} 
                             {...field} 
                             className="bg-[#0D0208] border-[#008F11] focus:border-[#00FF41] text-white resize-none"
@@ -195,7 +195,7 @@ const ContactSection = () => {
                     className="w-full md:w-auto relative overflow-hidden bg-[#00FF41] text-[#0D0208] hover:bg-[#008F11] hover:text-white transition-all"
                   >
                     <span className="relative z-10">
-                      {contactMutation.isPending ? "Sending..." : "Send Message"}
+                      {contactMutation.isPending ? "Отправка..." : "Отправить Сообщение"}
                     </span>
                     <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent z-0 transition-all duration-700 hover:left-[100%]"></span>
                   </Button>
@@ -204,7 +204,7 @@ const ContactSection = () => {
             </div>
             
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-white">Contact Information</h3>
+              <h3 className="text-2xl font-bold mb-6 text-white">Контактная Информация</h3>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start">
@@ -226,14 +226,14 @@ const ContactSection = () => {
                 ))}
                 
                 <div className="mt-8">
-                  <h4 className="text-white font-bold mb-4">Follow Us</h4>
+                  <h4 className="text-white font-bold mb-4">Наши Соцсети</h4>
                   <div className="flex space-x-4">
                     {['twitter', 'facebook', 'instagram', 'linkedin', 'github'].map((social) => (
                       <a 
                         key={social}
                         href="#" 
                         className="text-[#00FF41] hover:text-[#00FFFF] transition-colors text-xl"
-                        aria-label={`Follow us on ${social}`}
+                        aria-label={`Подписаться на ${social}`}
                       >
                         <i className={`fab fa-${social}${social === 'facebook' ? '-f' : social === 'linkedin' ? '-in' : ''}`}></i>
                       </a>

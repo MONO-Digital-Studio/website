@@ -7,66 +7,66 @@ type FilterCategory = "all" | "web" | "mobile" | "ecommerce" | "branding";
 const projects = [
   {
     id: 1,
-    title: "TechVision Dashboard",
+    title: "ТехВижн Дашборд",
     category: "web",
-    tag: "Web App",
-    description: "Interactive analytics dashboard with real-time data visualization and reporting capabilities.",
+    tag: "Веб-приложение",
+    description: "Интерактивная аналитическая панель с визуализацией данных в реальном времени и возможностями отчетности.",
     technologies: ["React", "D3.js", "Node.js"],
     imageUrl: "https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
   },
   {
     id: 2,
-    title: "HealthTrack App",
+    title: "ХелсТрек Приложение",
     category: "mobile",
-    tag: "Mobile App",
-    description: "Health monitoring mobile application with AI-driven insights and personalized recommendations.",
+    tag: "Мобильное приложение",
+    description: "Мобильное приложение для мониторинга здоровья с аналитикой на основе ИИ и персонализированными рекомендациями.",
     technologies: ["React Native", "Firebase", "TensorFlow"],
     imageUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
   },
   {
     id: 3,
-    title: "LuxeMarket",
+    title: "ЛюксМаркет",
     category: "ecommerce",
-    tag: "E-commerce",
-    description: "Premium e-commerce platform with advanced product filtering, AR previews, and personalized recommendations.",
+    tag: "Электронная коммерция",
+    description: "Премиальная платформа электронной коммерции с расширенной фильтрацией товаров, AR-предпросмотром и персонализированными рекомендациями.",
     technologies: ["Shopify", "Next.js", "GraphQL"],
     imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
   },
   {
     id: 4,
-    title: "NeoTech Rebrand",
+    title: "НеоТек Ребрендинг",
     category: "branding",
-    tag: "Branding",
-    description: "Complete brand identity overhaul for a tech startup, including logo design, brand guidelines, and digital assets.",
+    tag: "Брендинг",
+    description: "Полное обновление фирменного стиля для технологического стартапа, включая дизайн логотипа, руководство по бренду и цифровые активы.",
     technologies: ["Brand Identity", "UI Design", "Marketing"],
     imageUrl: "https://images.unsplash.com/photo-1545239351-cefa43af60f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
   },
   {
     id: 5,
-    title: "EduConnect Platform",
+    title: "ЭдуКоннект Платформа",
     category: "web",
-    tag: "Web Platform",
-    description: "Educational platform connecting students with tutors, featuring video conferencing and interactive learning tools.",
+    tag: "Веб-платформа",
+    description: "Образовательная платформа, соединяющая студентов с преподавателями, с функциями видеоконференций и интерактивными учебными инструментами.",
     technologies: ["Vue.js", "WebRTC", "Node.js"],
     imageUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
   },
   {
     id: 6,
-    title: "NeonRush Game",
+    title: "НеонРаш Игра",
     category: "mobile",
-    tag: "Mobile Game",
-    description: "Cyberpunk-themed mobile game with advanced 3D graphics, multiplayer capabilities, and innovative gameplay mechanics.",
+    tag: "Мобильная игра",
+    description: "Мобильная игра в киберпанк-стиле с продвинутой 3D-графикой, возможностями многопользовательской игры и инновационной механикой.",
     technologies: ["Unity", "C#", "AR"],
     imageUrl: "https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
   }
 ];
 
 const filterButtons = [
-  { id: "all", label: "All" },
-  { id: "web", label: "Web" },
-  { id: "mobile", label: "Mobile" },
-  { id: "ecommerce", label: "E-commerce" },
-  { id: "branding", label: "Branding" }
+  { id: "all", label: "Все" },
+  { id: "web", label: "Веб" },
+  { id: "mobile", label: "Мобильные" },
+  { id: "ecommerce", label: "Э-коммерция" },
+  { id: "branding", label: "Брендинг" }
 ];
 
 const PortfolioSection = () => {
@@ -86,9 +86,9 @@ const PortfolioSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="text-[#00FF41] text-sm mb-2 font-['Roboto_Mono']">// OUR WORK</div>
+          <div className="text-[#00FF41] text-sm mb-2 font-['Roboto_Mono']">// НАШИ РАБОТЫ</div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-['Courier_Prime']">
-            Featured <span className="text-[#00FF41]">Projects</span>
+            Избранные <span className="text-[#00FF41]">Проекты</span>
           </h2>
           <div className="w-16 h-1 bg-[#00FF41] mx-auto"></div>
         </motion.div>
@@ -179,7 +179,7 @@ const PortfolioSection = () => {
             href="#contact"
             className="relative overflow-hidden inline-block bg-[#00FF41] text-[#0D0208] px-6 py-3 rounded font-bold transition-all hover:bg-[#008F11] hover:text-white"
           >
-            <span className="relative z-10">Start Your Project</span>
+            <span className="relative z-10">Начать Ваш Проект</span>
             <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent z-0 transition-all duration-700 hover:left-[100%]"></span>
           </a>
         </motion.div>

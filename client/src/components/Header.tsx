@@ -4,11 +4,11 @@ import { Menu } from "lucide-react";
 import { Link } from "wouter";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Portfolio", href: "#portfolio" },
-  { name: "Contact", href: "#contact" },
+  { name: "Главная", href: "#home" },
+  { name: "О нас", href: "#about" },
+  { name: "Услуги", href: "#services" },
+  { name: "Портфолио", href: "#portfolio" },
+  { name: "Контакты", href: "#contact" },
 ];
 
 const Header = () => {
@@ -79,7 +79,7 @@ const Header = () => {
               href="#contact" 
               className="relative bg-[#008F11] overflow-hidden text-white px-4 py-2 rounded hover:bg-[#00FF41] hover:text-[#0D0208] transition-all"
             >
-              <span className="relative z-10">Get Started</span>
+              <span className="relative z-10">Начать работу</span>
               <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent z-0 transition-all duration-700 hover:left-[100%]"></span>
             </a>
           </nav>
@@ -112,7 +112,7 @@ const Header = () => {
                 className="bg-[#008F11] text-white px-4 py-2 rounded text-center hover:bg-[#00FF41] hover:text-[#0D0208] transition-all"
                 onClick={handleLinkClick}
               >
-                Get Started
+                Начать работу
               </a>
             </nav>
           </motion.div>

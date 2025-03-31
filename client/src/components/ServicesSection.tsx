@@ -7,69 +7,69 @@ import {
 
 const services = [
   {
-    title: "Web Development",
+    title: "Веб-разработка",
     icon: <MonitorIcon className="w-9 h-9" />,
-    description: "Custom websites and web applications built with the latest technologies and optimized for performance.",
+    description: "Индивидуальные веб-сайты и веб-приложения, созданные с использованием новейших технологий и оптимизированные для высокой производительности.",
     features: [
-      "Frontend Development",
-      "Backend Development",
-      "API Integration",
-      "Progressive Web Apps",
+      "Фронтенд-разработка",
+      "Бэкенд-разработка",
+      "Интеграция API",
+      "Прогрессивные веб-приложения",
     ]
   },
   {
-    title: "UI/UX Design",
+    title: "UI/UX Дизайн",
     icon: <PaletteIcon className="w-9 h-9" />,
-    description: "User-centered design that creates intuitive, engaging, and accessible digital experiences.",
+    description: "Пользовательско-ориентированный дизайн, создающий интуитивно понятный, привлекательный и доступный цифровой опыт.",
     features: [
-      "User Interface Design",
-      "User Experience Research",
-      "Prototyping & Wireframing",
-      "Usability Testing",
+      "Дизайн пользовательского интерфейса",
+      "Исследование пользовательского опыта",
+      "Прототипирование и макетирование",
+      "Тестирование удобства использования",
     ]
   },
   {
-    title: "Mobile App Development",
+    title: "Разработка мобильных приложений",
     icon: <SmartphoneIcon className="w-9 h-9" />,
-    description: "Native and cross-platform mobile applications that provide seamless experiences across devices.",
+    description: "Нативные и кроссплатформенные мобильные приложения, обеспечивающие плавный пользовательский опыт на всех устройствах.",
     features: [
-      "iOS Development",
-      "Android Development",
-      "Cross-platform Solutions",
-      "App Store Optimization",
+      "Разработка для iOS",
+      "Разработка для Android",
+      "Кроссплатформенные решения",
+      "Оптимизация для App Store",
     ]
   },
   {
-    title: "E-commerce Solutions",
+    title: "Решения для электронной коммерции",
     icon: <ShoppingCartIcon className="w-9 h-9" />,
-    description: "Custom online stores and e-commerce platforms that drive sales and enhance customer experience.",
+    description: "Индивидуальные интернет-магазины и платформы электронной коммерции, которые увеличивают продажи и улучшают опыт клиентов.",
     features: [
-      "Custom E-commerce Sites",
-      "Payment Gateway Integration",
-      "Inventory Management",
-      "Customer Analytics",
+      "Индивидуальные сайты E-commerce",
+      "Интеграция платежных систем",
+      "Управление инвентарем",
+      "Аналитика клиентов",
     ]
   },
   {
-    title: "Digital Marketing",
+    title: "Цифровой маркетинг",
     icon: <TrendingUpIcon className="w-9 h-9" />,
-    description: "Strategic digital marketing services to increase visibility, engagement, and conversion.",
+    description: "Стратегические услуги цифрового маркетинга для повышения видимости, вовлеченности и конверсии.",
     features: [
-      "SEO Optimization",
-      "Content Marketing",
-      "Social Media Strategy",
-      "Analytics & Reporting",
+      "SEO оптимизация",
+      "Контент-маркетинг",
+      "Стратегия в социальных сетях",
+      "Аналитика и отчетность",
     ]
   },
   {
-    title: "Maintenance & Support",
+    title: "Обслуживание и поддержка",
     icon: <SettingsIcon className="w-9 h-9" />,
-    description: "Ongoing technical support, updates, and maintenance to keep your digital products running smoothly.",
+    description: "Постоянная техническая поддержка, обновления и обслуживание для бесперебойной работы ваших цифровых продуктов.",
     features: [
-      "24/7 Technical Support",
-      "Regular Updates",
-      "Security Monitoring",
-      "Performance Optimization",
+      "Техническая поддержка 24/7",
+      "Регулярные обновления",
+      "Мониторинг безопасности",
+      "Оптимизация производительности",
     ]
   },
 ];
@@ -85,9 +85,9 @@ const ServicesSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="text-[#00FF41] text-sm mb-2 font-['Roboto_Mono']">// WHAT WE DO</div>
+          <div className="text-[#00FF41] text-sm mb-2 font-['Roboto_Mono']">// ЧТО МЫ ДЕЛАЕМ</div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-['Courier_Prime']">
-            Our <span className="text-[#00FF41]">Services</span>
+            Наши <span className="text-[#00FF41]">Услуги</span>
           </h2>
           <div className="w-16 h-1 bg-[#00FF41] mx-auto"></div>
         </motion.div>
@@ -117,7 +117,7 @@ const ServicesSection = () => {
                   ))}
                 </ul>
                 <a href="#contact" className="inline-flex items-center text-[#00FF41] hover:text-[#00FFFF] transition-colors">
-                  Learn more <ChevronRightIcon className="ml-1 h-4 w-4" />
+                  Узнать больше <ChevronRightIcon className="ml-1 h-4 w-4" />
                 </a>
               </div>
             </motion.div>
