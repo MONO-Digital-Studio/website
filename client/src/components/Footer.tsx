@@ -12,14 +12,14 @@ const Footer = () => {
             viewport={{ once: true, amount: 0.2 }}
           >
             <h3 className="text-xl font-bold mb-4 text-white font-['Courier_Prime']">MONO Digital Studio</h3>
-            <p className="text-gray-300 mb-6">Creating innovative digital solutions that push boundaries and exceed expectations.</p>
+            <p className="text-gray-300 mb-6">Создаем инновационные цифровые решения, которые раздвигают границы и превосходят ожидания.</p>
             <div className="flex space-x-4">
               {['twitter', 'facebook', 'instagram', 'linkedin'].map((social) => (
                 <a 
                   key={social}
                   href="#" 
                   className="text-[#00FF41] hover:text-[#00FFFF] transition-colors"
-                  aria-label={`Follow us on ${social}`}
+                  aria-label={`Подписаться на ${social}`}
                 >
                   <i className={`fab fa-${social}${social === 'facebook' ? '-f' : social === 'linkedin' ? '-in' : ''}`}></i>
                 </a>
@@ -33,12 +33,12 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            <h4 className="text-lg font-bold mb-4 text-white font-['Courier_Prime']">Quick Links</h4>
+            <h4 className="text-lg font-bold mb-4 text-white font-['Courier_Prime']">Навигация</h4>
             <ul className="space-y-2">
-              {['Home', 'About Us', 'Services', 'Portfolio', 'Contact'].map((link) => (
+              {['Главная', 'О Нас', 'Услуги', 'Портфолио', 'Контакты'].map((link, index) => (
                 <li key={link}>
                   <a 
-                    href={`#${link.toLowerCase().replace(' ', '')}`} 
+                    href={index === 0 ? '#' : `#${['about', 'services', 'portfolio', 'contact'][index-1]}`} 
                     className="text-gray-300 hover:text-[#00FF41] transition-colors"
                   >
                     {link}
@@ -54,14 +54,14 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            <h4 className="text-lg font-bold mb-4 text-white font-['Courier_Prime']">Services</h4>
+            <h4 className="text-lg font-bold mb-4 text-white font-['Courier_Prime']">Услуги</h4>
             <ul className="space-y-2">
               {[
-                'Web Development', 
-                'UI/UX Design', 
-                'Mobile Apps', 
-                'E-commerce', 
-                'Digital Marketing'
+                'Веб-разработка', 
+                'UI/UX Дизайн', 
+                'Мобильные Приложения', 
+                'Электронная Коммерция', 
+                'Цифровой Маркетинг'
               ].map((service) => (
                 <li key={service}>
                   <a 
@@ -81,18 +81,18 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            <h4 className="text-lg font-bold mb-4 text-white font-['Courier_Prime']">Newsletter</h4>
-            <p className="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates and insights.</p>
+            <h4 className="text-lg font-bold mb-4 text-white font-['Courier_Prime']">Новости</h4>
+            <p className="text-gray-300 mb-4">Подпишитесь на нашу рассылку для получения последних обновлений и новостей.</p>
             <form className="flex">
               <input 
                 type="email" 
-                placeholder="Your email" 
+                placeholder="Ваш email" 
                 className="bg-[#0D0208] border border-[#008F11] focus:border-[#00FF41] rounded-l p-2 text-white flex-grow focus:outline-none"
               />
               <button 
                 type="submit" 
                 className="bg-[#00FF41] text-[#0D0208] px-4 py-2 rounded-r font-bold hover:bg-[#008F11] hover:text-white transition-all"
-                aria-label="Subscribe"
+                aria-label="Подписаться"
               >
                 <i className="fas fa-paper-plane"></i>
               </button>
@@ -107,9 +107,9 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <p className="text-gray-300 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} MONO Digital Studio. All rights reserved.</p>
+          <p className="text-gray-300 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} MONO Digital Studio. Все права защищены.</p>
           <div className="flex space-x-4 text-sm">
-            {['Privacy Policy', 'Terms of Service', 'Sitemap'].map((link) => (
+            {['Политика Конфиденциальности', 'Условия Использования', 'Карта Сайта'].map((link) => (
               <a 
                 key={link}
                 href="#" 
