@@ -77,7 +77,7 @@ const AboutSection = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <h3 className="text-2xl font-bold mb-10 font-['Courier_Prime']">
-            Наш <span className="text-[#00FF41]">Процесс</span>
+            <span className="text-[#00FF41]">Рабочий</span> Процесс
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-[#0D0208]/75 backdrop-blur-md p-6 rounded-lg border border-[#00FF41] hover:border-[#00FFFF] transition-colors group">
@@ -85,14 +85,14 @@ const AboutSection = () => {
                 <LightbulbIcon className="h-6 w-6 text-[#0D0208]" />
               </div>
               <h4 className="text-xl font-bold mb-3 text-white">Исследование</h4>
-              <p className="text-gray-300 text-sm">Мы изучаем ваш бизнес, цели и требования для определения оптимального пути вперед.</p>
+              <p className="text-gray-300 text-sm">Мы изучаем ваш бизнес, цели и задачи для определения оптимального решения.</p>
             </div>
             <div className="bg-[#0D0208]/75 backdrop-blur-md p-6 rounded-lg border border-[#00FF41] hover:border-[#00FFFF] transition-colors group">
               <div className="h-16 w-16 rounded-full bg-[#008F11] flex items-center justify-center mx-auto mb-4">
                 <PencilRulerIcon className="h-6 w-6 text-[#0D0208]" />
               </div>
               <h4 className="text-xl font-bold mb-3 text-white">Дизайн</h4>
-              <p className="text-gray-300 text-sm">Наши дизайнеры создают интуитивно понятный пользовательский опыт и визуально привлекательные интерфейсы.</p>
+              <p className="text-gray-300 text-sm">Наши дизайнеры создают интуитивно понятные и визуально привлекательные интерфейсы.</p>
             </div>
             <div className="bg-[#0D0208]/75 backdrop-blur-md p-6 rounded-lg border border-[#00FF41] hover:border-[#00FFFF] transition-colors group">
               <div className="h-16 w-16 rounded-full bg-[#008F11] flex items-center justify-center mx-auto mb-4">
