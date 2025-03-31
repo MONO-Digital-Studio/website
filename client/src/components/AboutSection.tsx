@@ -14,7 +14,7 @@ const AboutSection = () => {
         >
           <div className="text-[#00FF41] text-sm mb-2 font-['Roboto_Mono']">// КТО МЫ</div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-['Courier_Prime']">
-            О <span className="text-[#00FF41]">MONO</span>
+            <span className="text-[#00FF41]">MONO</span>
           </h2>
           <div className="w-16 h-1 bg-[#00FF41] mx-auto"></div>
         </motion.div>
@@ -45,13 +45,13 @@ const AboutSection = () => {
             <div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="bg-[#0D0208] p-6 rounded-lg border border-[#008F11] hover:border-[#00FF41] transition-all">
-                  <div className="text-4xl text-[#00FF41] mb-2">12+</div>
+                  <div className="text-4xl text-[#00FF41] mb-2">7+</div>
                   <div className="text-white font-bold mb-1">Лет опыта</div>
-                  <div className="text-gray-400 text-sm">Совокупный опыт</div>
+                  <div className="text-gray-400 text-sm">Совокумный опыт в Digital</div>
                 </div>
                 <div className="bg-[#0D0208] p-6 rounded-lg border border-[#008F11] hover:border-[#00FF41] transition-all">
-                  <div className="text-4xl text-[#00FF41] mb-2">200+</div>
-                  <div className="text-white font-bold mb-1">Завершенных проектов</div>
+                  <div className="text-4xl text-[#00FF41] mb-2">100+</div>
+                  <div className="text-white font-bold mb-1">Реализованных проектов</div>
                   <div className="text-gray-400 text-sm">В разных отраслях</div>
                 </div>
                 <div className="bg-[#0D0208] p-6 rounded-lg border border-[#008F11] hover:border-[#00FF41] transition-all">
