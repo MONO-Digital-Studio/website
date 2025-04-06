@@ -37,7 +37,7 @@ const AboutSection = () => {
               <div className="flex flex-wrap gap-4 text-sm">
                 <span className="px-3 py-1 rounded bg-[#0D0208] border border-[#00FF41] text-[#00FF41]">Веб-разработка</span>
                 <span className="px-3 py-1 rounded bg-[#0D0208] border border-[#00FF41] text-[#00FF41]">UI/UX Дизайн</span>
-                <span className="px-3 py-1 rounded bg-[#0D0208] border border-[#00FF41] text-[#00FF41]">Цифровая стратегия</span>
+                <span className="px-3 py-1 rounded bg-[#0D0208] border border-[#00FF41] text-[#00FF41]">Digital маркетинг</span>
                 <span className="px-3 py-1 rounded bg-[#0D0208] border border-[#00FF41] text-[#00FF41]">Цифровая экосистема</span>
                 <span className="px-3 py-1 rounded bg-[#0D0208] border border-[#00FF41] text-[#00FF41]">Разработка приложений</span>
               </div>
