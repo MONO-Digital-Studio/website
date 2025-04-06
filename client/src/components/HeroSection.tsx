@@ -80,7 +80,6 @@ const HeroSection = () => {
                   </div>
                 </div>
                 <div className="relative">
-                  <div className="text-[#00FF41] text-sm mb-2 font-['Roboto_Mono']">// РЕШЕНИЯ НА БАЗЕ ИИ</div>
                   <h3 className="text-white text-2xl mb-4 font-bold font-['Roboto_Mono']">Преимущества <span className="text-[#00FF41]">MONO</span></h3>
                   <ul className="text-gray-300 space-y-3">
                     <li className="flex items-start">
