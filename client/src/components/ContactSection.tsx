@@ -138,7 +138,7 @@ const ContactSection = () => {
                           <FormLabel className="text-white">Email</FormLabel>
                           <FormControl>
                             <Input 
-                              placeholder="ваш@email.com" 
+                              placeholder="Ваш email" 
                               {...field} 
                               className="bg-[#0D0208] border-[#008F11] focus:border-[#00FF41] text-white"
                             />
