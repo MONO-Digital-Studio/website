@@ -89,7 +89,7 @@ const HeroSection = () => {
                     </li>
                     <li className="flex items-start">
                       <span className="text-[#00FF41] mr-2">{'>'}</span> 
-                      <span>Адаптивный и креативный дизайн</span>
+                      <span>Креативный подход к дизайну</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-[#00FF41] mr-2">{'>'}</span> 
