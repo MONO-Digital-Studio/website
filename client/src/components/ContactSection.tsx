@@ -198,7 +198,7 @@ const ContactSection = () => {
                 <div className="space-y-4 sm:space-y-6 flex-grow">
                   {contactInfo.map((info, index) => (
                     <div key={index} className="md:justify-center">
-                      <h4 className="text-white font-bold mb-1 text-sm sm:text-base">{info.title}</h4>
+                      <h4 className="text-[#00FF41] font-bold mb-1 text-sm sm:text-base">{info.title}</h4>
                       <p className="text-gray-300 text-sm sm:text-base">
                         {info.details.map((line, idx) => (
                           <span key={idx}>
@@ -212,7 +212,7 @@ const ContactSection = () => {
                 </div>
                 
                 <div className="mt-auto pt-6 sm:pt-8 border-t border-[#008F11]/30">
-                  <h4 className="text-white font-bold mb-3 text-sm sm:text-base">Мессенджеры</h4>
+                  <h4 className="text-[#00FF41] font-bold mb-3 text-sm sm:text-base">Мессенджеры</h4>
                   <div className="flex items-center gap-4 sm:gap-5 md:justify-center">
                     <a 
                       href="https://t.me/MONOStudioCRM_Bot" 
