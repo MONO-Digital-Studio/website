@@ -44,10 +44,9 @@ const HeroSection = () => {
             <div className="flex flex-wrap gap-4">
               <a 
                 href="#services" 
-                className="relative overflow-hidden bg-[#00FF41] text-[#0D0208] px-6 py-3 rounded font-bold transition-all hover:bg-[#008F11] hover:text-white"
+                className="border-2 border-[#00FF41] text-[#00FF41] px-6 py-3 rounded font-bold transition-all hover:bg-[#0D0208] hover:text-white hover:border-white"
               >
-                <span className="relative z-10">Услуги</span>
-                <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent z-0 transition-all duration-700 hover:left-[100%]"></span>
+                Услуги
               </a>
             </div>
           </motion.div>
