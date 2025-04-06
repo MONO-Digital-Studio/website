@@ -30,6 +30,7 @@ const DigitalRain = () => {
     const fontSize = 14;
     const columns = Math.floor(canvas.width / fontSize);
     const drops: number[] = [];
+    const speed = 0.5; // Уменьшаем скорость падения (было неявно 1)
     
     // Initialize drops
     for (let i = 0; i < columns; i++) {
@@ -38,8 +39,8 @@ const DigitalRain = () => {
     
     // Draw the characters
     const draw = () => {
-      // Add semi-transparent black rectangle to create trail effect
-      ctx.fillStyle = "rgba(13, 2, 8, 0.05)";
+      // Add semi-transparent black rectangle to create trail effect 
+      ctx.fillStyle = "rgba(13, 2, 8, 0.03)"; // Уменьшаем прозрачность для более длинных следов
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       
       // Set the font
@@ -58,11 +59,11 @@ const DigitalRain = () => {
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
         
         // Move the drop down
-        drops[i]++;
+        drops[i] += speed; // Используем скорость для плавного движения
         
         // Send the drop back to the top randomly after it has crossed the screen
         // Add randomness to the reset to make the drops scattered on the Y axis
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.985) { // Увеличиваем порог для более редкого возврата
           drops[i] = Math.random() * -20;
         }
       }
