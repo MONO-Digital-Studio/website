@@ -107,18 +107,18 @@ const ContactSection = () => {
         </motion.div>
         
         <motion.div 
-          className="bg-[#0D0208]/75 backdrop-blur-md rounded-lg p-8 border border-[#00FF41] hover:border-[#00FFFF] transition-colors"
+          className="bg-[#0D0208]/75 backdrop-blur-md rounded-lg p-4 sm:p-6 md:p-8 border border-[#00FF41] hover:border-[#00FFFF] transition-colors"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="grid md:grid-cols-2 gap-10 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-start">
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-white">Отправьте Нам Сообщение</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">Отправьте Нам Сообщение</h3>
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <FormField
                       control={form.control}
                       name="name"
@@ -180,9 +180,9 @@ const ContactSection = () => {
                         <FormControl>
                           <Textarea 
                             placeholder="Ваше сообщение..." 
-                            rows={6} 
+                            rows={4} 
                             {...field} 
-                            className="bg-[#0D0208] border-[#008F11] focus:border-[#00FF41] text-white resize-none"
+                            className="bg-[#0D0208] border-[#008F11] focus:border-[#00FF41] text-white resize-none sm:rows-6"
                           />
                         </FormControl>
                         <FormMessage />
@@ -204,16 +204,16 @@ const ContactSection = () => {
             </div>
             
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-white">Контактная Информация</h3>
-              <div className="space-y-6">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">Контактная Информация</h3>
+              <div className="space-y-4 sm:space-y-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="text-[#00FF41] mr-4 mt-1">
+                    <div className="text-[#00FF41] mr-3 sm:mr-4 mt-1 flex-shrink-0">
                       {info.icon}
                     </div>
                     <div>
-                      <h4 className="text-white font-bold mb-1">{info.title}</h4>
-                      <p className="text-gray-300">
+                      <h4 className="text-white font-bold mb-1 text-sm sm:text-base">{info.title}</h4>
+                      <p className="text-gray-300 text-sm sm:text-base">
                         {info.details.map((line, idx) => (
                           <span key={idx}>
                             {line}
@@ -225,14 +225,14 @@ const ContactSection = () => {
                   </div>
                 ))}
                 
-                <div className="mt-8">
-                  <h4 className="text-white font-bold mb-4">Наши Соцсети</h4>
-                  <div className="flex space-x-4">
+                <div className="mt-6 sm:mt-8">
+                  <h4 className="text-white font-bold mb-3 sm:mb-4 text-base sm:text-lg">Наши Соцсети</h4>
+                  <div className="flex space-x-3 sm:space-x-4">
                     {['twitter', 'facebook', 'instagram', 'linkedin', 'github'].map((social) => (
                       <a 
                         key={social}
                         href="#" 
-                        className="text-[#00FF41] hover:text-[#00FFFF] transition-colors text-xl"
+                        className="text-[#00FF41] hover:text-[#00FFFF] transition-colors text-lg sm:text-xl p-2 hover:bg-[#0D0208]/50 rounded-full"
                         aria-label={`Подписаться на ${social}`}
                       >
                         <i className={`fab fa-${social}${social === 'facebook' ? '-f' : social === 'linkedin' ? '-in' : ''}`}></i>
