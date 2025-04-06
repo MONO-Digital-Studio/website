@@ -98,7 +98,7 @@ const ContactSection = () => {
         </motion.div>
         
         <motion.div 
-          className="bg-[#0D0208]/75 backdrop-blur-md rounded-lg p-4 sm:p-6 md:p-8 border border-[#00FF41] hover:border-[#00FFFF] transition-colors"
+          className="bg-[#0D0208]/75 backdrop-blur-md rounded-lg p-4 sm:p-6 md:p-8 border border-[#00FF41] hover:border-white transition-colors"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
