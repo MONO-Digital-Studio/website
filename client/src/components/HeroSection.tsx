@@ -39,7 +39,7 @@ const HeroSection = () => {
               <span className="text-[#00FF41] block leading-tight"> Цифровые Впечатления</span>
             </h2>
             <p className="text-gray-300 text-lg md:text-xl mb-8 leading-relaxed font-['Roboto_Mono']">
-              Передовые решения и цифровая трансформация для прогрессивных компаний.
+              ИИ решения и цифровая трансформация для прогрессивных предпринимателей.
             </p>
             <div className="flex flex-wrap gap-4">
               <a 
