@@ -91,10 +91,10 @@ const Footer = () => {
           >
             <h4 className="text-lg font-bold mb-4 text-[#00FF41] font-['Courier_Prime']">Навигация</h4>
             <ul className="space-y-2">
-              {['Главная', 'О Нас', 'Услуги', 'Портфолио', 'Контакты'].map((link, index) => (
+              {['Главная', 'О Нас', 'Услуги', 'Контакты'].map((link, index) => (
                 <li key={link}>
                   <a 
-                    href={index === 0 ? '#' : `#${['about', 'services', 'portfolio', 'contact'][index-1]}`} 
+                    href={index === 0 ? '#' : `#${['about', 'services', 'contact'][index-1]}`} 
                     className="text-gray-300 hover:text-[#00FF41] transition-colors"
                   >
                     {link}
