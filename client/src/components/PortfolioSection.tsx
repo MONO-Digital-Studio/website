@@ -86,7 +86,7 @@ const PortfolioSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="text-[#00FF41] text-sm mb-2 font-['Roboto_Mono']">// НАШИ РАБОТЫ</div>
+
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-['Courier_Prime']">
             Избранные <span className="text-[#00FF41]">Проекты</span>
           </h2>
