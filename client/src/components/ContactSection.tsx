@@ -71,12 +71,12 @@ const ContactSection = () => {
     {
       icon: <MailIcon className="h-5 w-5" />,
       title: "Email",
-      details: ["info@monodigitalstudio.com", "support@monodigitalstudio.com"],
+      details: ["info@monodigitalstudio.com"],
     },
     {
       icon: <PhoneIcon className="h-5 w-5" />,
       title: "Телефон",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
+      details: ["+7 (999) 123-4567"],
     },
   ];
   
