@@ -195,7 +195,7 @@ const ContactSection = () => {
             </div>
             
             <div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">Контактная Информация</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">Контакты</h3>
               <div className="space-y-4 sm:space-y-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start">
