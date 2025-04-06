@@ -105,19 +105,53 @@ const ContactSection = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-start">
-            <div className="md:text-center">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">Напишите нам</h3>
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <div className="md:text-center flex flex-col h-full justify-between">
+              <div>
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">Напишите нам</h3>
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                      <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormControl>
+                              <Input 
+                                placeholder="Ваше имя" 
+                                {...field} 
+                                className="bg-[#0D0208] border-[#008F11] focus:border-[#00FF41] text-white"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormControl>
+                              <Input 
+                                placeholder="Ваш email" 
+                                {...field} 
+                                className="bg-[#0D0208] border-[#008F11] focus:border-[#00FF41] text-white"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
                     <FormField
                       control={form.control}
-                      name="name"
+                      name="subject"
                       render={({ field }) => (
                         <FormItem>
                           <FormControl>
                             <Input 
-                              placeholder="Ваше имя" 
+                              placeholder="Тема сообщения" 
                               {...field} 
                               className="bg-[#0D0208] border-[#008F11] focus:border-[#00FF41] text-white"
                             />
@@ -128,74 +162,43 @@ const ContactSection = () => {
                     />
                     <FormField
                       control={form.control}
-                      name="email"
+                      name="message"
                       render={({ field }) => (
                         <FormItem>
                           <FormControl>
-                            <Input 
-                              placeholder="Ваш email" 
+                            <Textarea 
+                              placeholder="Ваше сообщение..." 
+                              rows={4} 
                               {...field} 
-                              className="bg-[#0D0208] border-[#008F11] focus:border-[#00FF41] text-white"
+                              className="bg-[#0D0208] border-[#008F11] focus:border-[#00FF41] text-white resize-none sm:rows-6"
                             />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
-                  </div>
-                  <FormField
-                    control={form.control}
-                    name="subject"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormControl>
-                          <Input 
-                            placeholder="Тема сообщения" 
-                            {...field} 
-                            className="bg-[#0D0208] border-[#008F11] focus:border-[#00FF41] text-white"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormControl>
-                          <Textarea 
-                            placeholder="Ваше сообщение..." 
-                            rows={4} 
-                            {...field} 
-                            className="bg-[#0D0208] border-[#008F11] focus:border-[#00FF41] text-white resize-none sm:rows-6"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <div className="md:text-center">
-                    <Button 
-                      type="submit"
-                      disabled={contactMutation.isPending}
-                      className="w-full md:w-auto relative overflow-hidden bg-[#00FF41] text-[#0D0208] hover:bg-[#008F11] hover:text-white transition-all"
-                    >
-                      <span className="relative z-10">
-                        {contactMutation.isPending ? "Отправка..." : "Отправить Сообщение"}
-                      </span>
-                      <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent z-0 transition-all duration-700 hover:left-[100%]"></span>
-                    </Button>
-                  </div>
-                </form>
-              </Form>
+                  </form>
+                </Form>
+              </div>
+              <div className="md:text-center pt-4 md:pt-6 mt-4 flex md:justify-center">
+                <Button 
+                  type="submit"
+                  onClick={form.handleSubmit(onSubmit)}
+                  disabled={contactMutation.isPending}
+                  className="w-full md:w-auto relative overflow-hidden bg-[#00FF41] text-[#0D0208] hover:bg-[#008F11] hover:text-white transition-all"
+                >
+                  <span className="relative z-10">
+                    {contactMutation.isPending ? "Отправка..." : "Отправить Сообщение"}
+                  </span>
+                  <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent z-0 transition-all duration-700 hover:left-[100%]"></span>
+                </Button>
+              </div>
             </div>
             
-            <div className="md:text-center">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">Контакты</h3>
-              <div className="space-y-4 sm:space-y-6 h-full flex flex-col">
-                <div className="space-y-4 sm:space-y-6 flex-grow">
+            <div className="md:text-center flex flex-col h-full justify-between">
+              <div>
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">Контакты</h3>
+                <div className="space-y-4 sm:space-y-6">
                   {contactInfo.map((info, index) => (
                     <div key={index} className="md:justify-center">
                       <h4 className="text-[#00FF41] font-bold mb-1 text-sm sm:text-base">{info.title}</h4>
@@ -210,32 +213,32 @@ const ContactSection = () => {
                     </div>
                   ))}
                 </div>
+              </div>
                 
-                <div className="mt-auto pt-6 sm:pt-8 border-t border-[#008F11]/30">
-                  <h4 className="text-[#00FF41] font-bold mb-3 text-sm sm:text-base md:text-center">Мессенджеры</h4>
-                  <div className="md:text-center">
-                    <div className="inline-flex items-center gap-4 sm:gap-5 justify-center">
-                      <a 
-                        href="https://t.me/MONOStudioCRM_Bot" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-[#0D0208]/50 text-[#00FF41] hover:text-[#00FFFF] hover:bg-[#0D0208]/80 transition-all text-lg sm:text-xl p-3 rounded-md flex items-center"
-                        aria-label="Написать в Telegram бот @MONOStudioCRM_Bot"
-                      >
-                        <FaTelegramPlane className="mr-2" />
-                        <span>Telegram</span>
-                      </a>
-                      <a 
-                        href="https://wa.me/message/TXZPIWUQEWARP1" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-[#0D0208]/50 text-[#00FF41] hover:text-[#00FFFF] hover:bg-[#0D0208]/80 transition-all text-lg sm:text-xl p-3 rounded-md flex items-center"
-                        aria-label="Написать в WhatsApp"
-                      >
-                        <FaWhatsapp className="mr-2" />
-                        <span>WhatsApp</span>
-                      </a>
-                    </div>
+              <div className="pt-6 sm:pt-8 border-t border-[#008F11]/30 mt-auto">
+                <h4 className="text-[#00FF41] font-bold mb-3 text-sm sm:text-base md:text-center">Мессенджеры</h4>
+                <div className="md:text-center flex md:justify-center">
+                  <div className="inline-flex items-center gap-4 sm:gap-5 justify-center">
+                    <a 
+                      href="https://t.me/MONOStudioCRM_Bot" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#0D0208]/50 text-[#00FF41] hover:text-[#00FFFF] hover:bg-[#0D0208]/80 transition-all text-lg sm:text-xl p-3 rounded-md flex items-center"
+                      aria-label="Написать в Telegram бот @MONOStudioCRM_Bot"
+                    >
+                      <FaTelegramPlane className="mr-2" />
+                      <span>Telegram</span>
+                    </a>
+                    <a 
+                      href="https://wa.me/message/TXZPIWUQEWARP1" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#0D0208]/50 text-[#00FF41] hover:text-[#00FFFF] hover:bg-[#0D0208]/80 transition-all text-lg sm:text-xl p-3 rounded-md flex items-center"
+                      aria-label="Написать в WhatsApp"
+                    >
+                      <FaWhatsapp className="mr-2" />
+                      <span>WhatsApp</span>
+                    </a>
                   </div>
                 </div>
               </div>
