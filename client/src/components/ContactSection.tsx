@@ -105,7 +105,7 @@ const ContactSection = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-start">
-            <div>
+            <div className="md:text-center">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">Напишите нам</h3>
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
@@ -180,16 +180,18 @@ const ContactSection = () => {
                       </FormItem>
                     )}
                   />
-                  <Button 
-                    type="submit"
-                    disabled={contactMutation.isPending}
-                    className="w-full md:w-auto relative overflow-hidden bg-[#00FF41] text-[#0D0208] hover:bg-[#008F11] hover:text-white transition-all"
-                  >
-                    <span className="relative z-10">
-                      {contactMutation.isPending ? "Отправка..." : "Отправить Сообщение"}
-                    </span>
-                    <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent z-0 transition-all duration-700 hover:left-[100%]"></span>
-                  </Button>
+                  <div className="md:text-center">
+                    <Button 
+                      type="submit"
+                      disabled={contactMutation.isPending}
+                      className="w-full md:w-auto relative overflow-hidden bg-[#00FF41] text-[#0D0208] hover:bg-[#008F11] hover:text-white transition-all"
+                    >
+                      <span className="relative z-10">
+                        {contactMutation.isPending ? "Отправка..." : "Отправить Сообщение"}
+                      </span>
+                      <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent z-0 transition-all duration-700 hover:left-[100%]"></span>
+                    </Button>
+                  </div>
                 </form>
               </Form>
             </div>
