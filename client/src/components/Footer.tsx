@@ -65,7 +65,7 @@ const Footer = () => {
             viewport={{ once: true, amount: 0.2 }}
           >
             <h3 className="text-xl font-bold mb-4 text-white font-['Courier_Prime']">MONO Digital Studio</h3>
-            <p className="text-gray-300 mb-6">Создаем инновационные цифровые решения, которые раздвигают границы и превосходят ожидания.</p>
+            <p className="text-gray-300 mb-6">Создаем цифровые решения, которые превосходят ожидания.</p>
             <div className="flex space-x-4">
               {['twitter', 'facebook', 'instagram', 'linkedin'].map((social) => (
                 <a 
