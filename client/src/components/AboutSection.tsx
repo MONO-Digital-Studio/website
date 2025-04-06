@@ -100,7 +100,7 @@ const AboutSection = () => {
                 <CodeIcon className="h-6 w-6 text-[#0D0208]" />
               </div>
               <h4 className="text-xl font-bold mb-3 text-white">Разработка</h4>
-              <p className="text-gray-300 text-sm">Мы создаем надежные, масштабируемые решения с использованием передовых технологий и лучших практик.</p>
+              <p className="text-gray-300 text-sm">Разрабатываем надежные, масштабируемые и технологичные решения.</p>
             </div>
             <div className="bg-[#0D0208]/75 backdrop-blur-md p-6 rounded-lg border border-[#00FF41] hover:border-[#00FFFF] transition-colors group">
               <div className="h-16 w-16 rounded-full bg-[#008F11] flex items-center justify-center mx-auto mb-4">
