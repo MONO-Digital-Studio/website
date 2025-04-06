@@ -64,7 +64,10 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            <h3 className="text-xl font-bold mb-4 text-[#00FF41] font-['Courier_Prime']">MONO Digital Studio</h3>
+            <h3 className="text-xl font-bold mb-4 font-['Courier_Prime']">
+              <span className="text-[#00FF41]">MONO</span>{" "}
+              <span className="text-white">Digital Studio</span>
+            </h3>
             <p className="text-gray-300 mb-6">Создаем цифровые решения, которые превосходят ожидания.</p>
             <div className="flex space-x-4">
               {['twitter', 'facebook', 'instagram', 'linkedin'].map((social) => (
@@ -178,7 +181,7 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <p className="text-gray-300 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} MONO Digital Studio. Все права защищены.</p>
+          <p className="text-gray-300 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} <span className="text-[#00FF41]">MONO</span> <span className="text-white">Digital Studio</span>. Все права защищены.</p>
           <p className="text-gray-300 text-sm text-center md:text-right">ИП Шинкаренко Андрей Александрович ОГРНИП: 315595800025579</p>
         </motion.div>
       </div>
