@@ -179,17 +179,6 @@ const Footer = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <p className="text-gray-300 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} MONO Digital Studio. Все права защищены.</p>
-          <div className="flex space-x-4 text-sm">
-            {['Политика Конфиденциальности', 'Условия Использования', 'Карта Сайта'].map((link) => (
-              <a 
-                key={link}
-                href="#" 
-                className="text-gray-300 hover:text-[#00FF41] transition-colors"
-              >
-                {link}
-              </a>
-            ))}
-          </div>
         </motion.div>
       </div>
     </footer>
