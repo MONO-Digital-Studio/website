@@ -76,23 +76,22 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-20 relative">
-      <div className="container mx-auto px-4">
+    <section id="services" className="py-12 sm:py-16 md:py-20 relative">
+      <div className="container mx-auto px-3 sm:px-4">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-['Courier_Prime']">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 font-['Courier_Prime']">
             Наши <span className="text-[#00FF41]">Услуги</span>
           </h2>
-          <div className="w-16 h-1 bg-[#00FF41] mx-auto"></div>
+          <div className="w-12 sm:w-16 h-1 bg-[#00FF41] mx-auto"></div>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {services.map((service, index) => (
             <motion.div 
               key={index}
@@ -102,22 +101,22 @@ const ServicesSection = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true, amount: 0.2 }}
             >
-              <div className="p-6">
-                <div className="text-[#00FF41] text-4xl mb-4">
+              <div className="p-4 sm:p-5 md:p-6">
+                <div className="text-[#00FF41] text-3xl sm:text-4xl mb-3 sm:mb-4">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <ul className="text-gray-300 space-y-2 mb-6">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white">{service.title}</h3>
+                <p className="text-gray-300 text-sm sm:text-base mb-3 sm:mb-4">{service.description}</p>
+                <ul className="text-gray-300 space-y-1 sm:space-y-2 mb-4 sm:mb-6">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
-                      <span className="text-[#00FF41] mr-2 text-sm">{'>'}</span> 
-                      <span className="text-sm">{feature}</span>
+                      <span className="text-[#00FF41] mr-2 text-xs sm:text-sm">{'>'}</span> 
+                      <span className="text-xs sm:text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <a href="#contact" className="inline-flex items-center text-[#00FF41] hover:text-white transition-colors">
-                  Узнать больше <ChevronRightIcon className="ml-1 h-4 w-4" />
+                <a href="#contact" className="inline-flex items-center text-[#00FF41] hover:text-white transition-colors text-sm sm:text-base">
+                  Узнать больше <ChevronRightIcon className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
                 </a>
               </div>
             </motion.div>

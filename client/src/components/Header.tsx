@@ -33,11 +33,11 @@ const Header = () => {
   
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#0D0208]/75 backdrop-blur-md' : ''}`}>
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <motion.h1 
-              className="text-[#00FF41] text-xl md:text-3xl font-bold font-['Courier_Prime']"
+              className="text-[#00FF41] text-lg sm:text-xl md:text-3xl font-bold font-['Courier_Prime']"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
@@ -48,7 +48,7 @@ const Header = () => {
                   MONO
                 </span>
               </span>{" "}
-              <span className="text-white">Digital Studio</span>
+              <span className="text-white whitespace-nowrap">Digital Studio</span>
             </motion.h1>
           </div>
           
@@ -89,18 +89,18 @@ const Header = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            className="lg:hidden bg-[#0D0208]/90 backdrop-blur-md py-4 border-t border-[#008F11]/30"
+            className="lg:hidden bg-[#0D0208]/95 backdrop-blur-md py-3 sm:py-4 border-t border-[#008F11]/30"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <nav className="flex flex-col space-y-4 px-6">
+            <nav className="flex flex-col space-y-3 sm:space-y-4 px-4 sm:px-6">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-white hover:text-[#00FF41] transition-colors py-2"
+                  className="text-white text-sm sm:text-base hover:text-[#00FF41] transition-colors py-1.5 sm:py-2"
                   onClick={handleLinkClick}
                 >
                   {link.name}
@@ -108,7 +108,7 @@ const Header = () => {
               ))}
               <a
                 href="#contact"
-                className="bg-[#008F11] text-white px-4 py-2 rounded text-center hover:bg-[#00FF41] hover:text-[#0D0208] transition-all"
+                className="bg-[#008F11] text-white px-4 py-2 rounded text-center text-sm sm:text-base hover:bg-[#00FF41] hover:text-[#0D0208] transition-all"
                 onClick={handleLinkClick}
               >
                 Заказать проект

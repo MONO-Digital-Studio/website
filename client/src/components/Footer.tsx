@@ -55,26 +55,26 @@ const Footer = () => {
     }
   };
   return (
-    <footer className="py-10 relative bg-[#0D0208]/75 backdrop-blur-md border-t border-[#008F11]/30">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="py-6 sm:py-8 md:py-10 relative bg-[#0D0208]/75 backdrop-blur-md border-t border-[#008F11]/30">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            <h3 className="text-xl font-bold mb-4 font-['Courier_Prime']">
+            <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 font-['Courier_Prime']">
               <span className="text-[#00FF41]">MONO</span>{" "}
               <span className="text-white">Digital Studio</span>
             </h3>
-            <p className="text-gray-300 mb-6">Создаем цифровые решения, которые превосходят ожидания.</p>
+            <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">Создаем цифровые решения, которые превосходят ожидания.</p>
             <div className="flex space-x-4">
               {['twitter', 'facebook', 'instagram', 'linkedin'].map((social) => (
                 <a 
                   key={social}
                   href="#" 
-                  className="text-[#00FF41] hover:text-white transition-colors"
+                  className="text-[#00FF41] hover:text-white transition-colors text-sm sm:text-base"
                   aria-label={`Подписаться на ${social}`}
                 >
                   <i className={`fab fa-${social}${social === 'facebook' ? '-f' : social === 'linkedin' ? '-in' : ''}`}></i>
@@ -89,13 +89,13 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            <h4 className="text-lg font-bold mb-4 text-[#00FF41] font-['Courier_Prime']">Навигация</h4>
-            <ul className="space-y-2">
+            <h4 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-[#00FF41] font-['Courier_Prime']">Навигация</h4>
+            <ul className="space-y-1 sm:space-y-2">
               {['Главная', 'О Нас', 'Услуги', 'Контакты'].map((link, index) => (
                 <li key={link}>
                   <a 
                     href={index === 0 ? '#' : `#${['about', 'services', 'contact'][index-1]}`} 
-                    className="text-gray-300 hover:text-[#00FF41] transition-colors"
+                    className="text-gray-300 hover:text-[#00FF41] transition-colors text-sm sm:text-base"
                   >
                     {link}
                   </a>
@@ -110,8 +110,8 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            <h4 className="text-lg font-bold mb-4 text-[#00FF41] font-['Courier_Prime']">Услуги</h4>
-            <ul className="space-y-2">
+            <h4 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-[#00FF41] font-['Courier_Prime']">Услуги</h4>
+            <ul className="space-y-1 sm:space-y-2">
               {[
                 'Веб-разработка', 
                 'UI/UX Дизайн', 
@@ -122,7 +122,7 @@ const Footer = () => {
                 <li key={service}>
                   <a 
                     href="#services" 
-                    className="text-gray-300 hover:text-[#00FF41] transition-colors"
+                    className="text-gray-300 hover:text-[#00FF41] transition-colors text-sm sm:text-base"
                   >
                     {service}
                   </a>
@@ -137,13 +137,13 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            <h4 className="text-lg font-bold mb-4 text-[#00FF41] font-['Courier_Prime']">Новости</h4>
-            <p className="text-gray-300 mb-4">Подпишитесь на нашу рассылку для получения последних обновлений и новостей.</p>
+            <h4 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-[#00FF41] font-['Courier_Prime']">Новости</h4>
+            <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">Подпишитесь на нашу рассылку для получения последних обновлений и новостей.</p>
             <form className="flex" onSubmit={handleSubmit}>
               <input 
                 type="email" 
                 placeholder="Ваш email" 
-                className="bg-[#0D0208] border border-[#008F11] focus:border-[#00FF41] rounded-l p-2 text-white flex-grow focus:outline-none"
+                className="bg-[#0D0208] border border-[#008F11] focus:border-[#00FF41] rounded-l p-2 text-white flex-grow focus:outline-none text-sm sm:text-base h-9 sm:h-10"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={subscribeMutation.isPending}
@@ -155,19 +155,19 @@ const Footer = () => {
                   subscribeMutation.isPending 
                     ? "bg-[#008F11]/50 cursor-wait" 
                     : "bg-[#00FF41] hover:bg-[#008F11]"
-                } text-[#0D0208] hover:text-white px-4 py-2 rounded-r font-bold transition-all`}
+                } text-[#0D0208] hover:text-white px-3 sm:px-4 rounded-r font-bold transition-all h-9 sm:h-10 flex items-center justify-center`}
                 aria-label="Подписаться"
                 disabled={subscribeMutation.isPending}
               >
                 {subscribeMutation.isPending ? (
-                  <span className="flex items-center justify-center w-6 h-6">
-                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-[#0D0208]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <span className="flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6">
+                    <svg className="animate-spin h-3 w-3 sm:h-4 sm:w-4 text-[#0D0208]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
                   </span>
                 ) : (
-                  <i className="fas fa-paper-plane"></i>
+                  <i className="fas fa-paper-plane text-sm sm:text-base"></i>
                 )}
               </button>
             </form>
@@ -175,14 +175,14 @@ const Footer = () => {
         </div>
         
         <motion.div 
-          className="border-t border-[#008F11] mt-10 pt-6 flex flex-col md:flex-row justify-between items-center"
+          className="border-t border-[#008F11] mt-6 sm:mt-8 md:mt-10 pt-4 sm:pt-6 flex flex-col md:flex-row justify-between items-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <p className="text-gray-300 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} <span className="text-[#00FF41]">MONO</span> <span className="text-white">Digital Studio</span>. Все права защищены.</p>
-          <p className="text-gray-300 text-sm text-center md:text-right">ИП Шинкаренко Андрей Александрович ОГРНИП: 315595800025579</p>
+          <p className="text-gray-300 text-xs sm:text-sm mb-2 sm:mb-4 md:mb-0">&copy; {new Date().getFullYear()} <span className="text-[#00FF41]">MONO</span> <span className="text-white">Digital Studio</span>. Все права защищены.</p>
+          <p className="text-gray-300 text-xs sm:text-sm text-center md:text-right">ИП Шинкаренко Андрей Александрович<br className="sm:hidden" /> ОГРНИП: 315595800025579</p>
         </motion.div>
       </div>
     </footer>
