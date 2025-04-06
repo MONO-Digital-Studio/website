@@ -53,7 +53,7 @@ const HeroSection = () => {
                 href="#portfolio" 
                 className="border-2 border-[#00FF41] text-[#00FF41] px-6 py-3 rounded font-bold transition-all hover:bg-[#0D0208] hover:text-[#00FFFF] hover:border-[#00FFFF]"
               >
-                Посмотреть Работы
+                Кейсы
               </a>
             </div>
           </motion.div>
