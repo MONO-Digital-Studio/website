@@ -76,7 +76,7 @@ const ContactSection = () => {
     {
       icon: <PhoneIcon className="h-5 w-5" />,
       title: "Телефон",
-      details: ["+7 (999) 123-4567"],
+      details: ["+7 800 101 51 59"],
     },
   ];
   
