@@ -76,9 +76,10 @@ const AboutSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h3 className="text-3xl md:text-4xl font-bold mb-10 font-['Courier_Prime']">
+          <h3 className="text-3xl md:text-4xl font-bold mb-4 font-['Courier_Prime']">
             <span className="text-[#00FF41]">Рабочий</span> Процесс
           </h3>
+          <div className="w-16 h-1 bg-[#00FF41] mx-auto mb-10"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-[#0D0208]/75 backdrop-blur-md p-6 rounded-lg border border-[#00FF41] hover:border-[#00FFFF] transition-colors group">
               <div className="h-16 w-16 rounded-full bg-[#008F11] flex items-center justify-center mx-auto mb-4">
