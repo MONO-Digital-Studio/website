@@ -197,13 +197,13 @@ const ContactSection = () => {
               </Form>
             </div>
             
-            <div>
+            <div className="md:text-right">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">Контакты</h3>
               <div className="space-y-4 sm:space-y-6 h-full flex flex-col">
                 <div className="space-y-4 sm:space-y-6 flex-grow">
                   {contactInfo.map((info, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="text-[#00FF41] mr-3 sm:mr-4 mt-1 flex-shrink-0">
+                    <div key={index} className="flex items-start md:flex-row-reverse md:justify-start">
+                      <div className="text-[#00FF41] mr-3 sm:mr-4 md:mr-0 md:ml-3 sm:ml-4 mt-1 flex-shrink-0">
                         {info.icon}
                       </div>
                       <div>
@@ -223,7 +223,7 @@ const ContactSection = () => {
                 
                 <div className="mt-auto pt-6 sm:pt-8 border-t border-[#008F11]/30">
                   <h4 className="text-white font-bold mb-3 text-sm sm:text-base">Мессенджеры</h4>
-                  <div className="flex items-center gap-4 sm:gap-5">
+                  <div className="flex items-center gap-4 sm:gap-5 md:justify-end">
                     <a 
                       href="https://t.me/MONOStudioCRM_Bot" 
                       target="_blank"
