@@ -1,8 +1,6 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { MailIcon, PhoneIcon } from "lucide-react";
 import { FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
@@ -19,12 +17,13 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { z } from "zod";
 
 const contactFormSchema = z.object({
-  name: z.string().min(2, { message: "Имя должно содержать не менее 2 символов" }),
-  email: z.string().email({ message: "Пожалуйста, введите действительный email адрес" }),
-  subject: z.string().min(2, { message: "Тема должна содержать не менее 2 символов" }),
-  message: z.string().min(10, { message: "Сообщение должно содержать не менее 10 символов" }),
+  name: z.string().min(2, { message: "Имя должно быть не менее 2 символов" }),
+  email: z.string().email({ message: "Пожалуйста, введите корректный email" }),
+  subject: z.string().min(2, { message: "Тема должна быть не менее 2 символов" }),
+  message: z.string().min(10, { message: "Сообщение должно быть не менее 10 символов" }),
 });
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
@@ -46,18 +45,22 @@ const ContactSection = () => {
     mutationFn: (data: ContactFormValues) => {
       return apiRequest("POST", "/api/contact", data);
     },
-    onSuccess: () => {
+    onSuccess: (data) => {
       toast({
         title: "Сообщение отправлено!",
-        description: "Мы свяжемся с вами в ближайшее время.",
+        description: "Ваше сообщение успешно отправлено на hello@monostudio.site. Мы свяжемся с вами в ближайшее время.",
         variant: "default",
       });
       form.reset();
     },
-    onError: (error) => {
+    onError: (error: any) => {
+      const errorMessage = error?.response?.data?.message || 
+                           error?.message || 
+                           "Пожалуйста, попробуйте позже.";
+      
       toast({
         title: "Ошибка отправки сообщения",
-        description: error.message || "Пожалуйста, попробуйте позже.",
+        description: errorMessage,
         variant: "destructive",
       });
     },
