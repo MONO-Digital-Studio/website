@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPinIcon, MailIcon, PhoneIcon, ClockIcon } from "lucide-react";
+import { MailIcon, PhoneIcon } from "lucide-react";
+import { FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -68,11 +69,6 @@ const ContactSection = () => {
   
   const contactInfo = [
     {
-      icon: <MapPinIcon className="h-5 w-5" />,
-      title: "Адрес",
-      details: ["123 Технологический Бульвар, Цифровой район", "Сан-Франциско, CA 94107"],
-    },
-    {
       icon: <MailIcon className="h-5 w-5" />,
       title: "Email",
       details: ["info@monodigitalstudio.com", "support@monodigitalstudio.com"],
@@ -81,11 +77,6 @@ const ContactSection = () => {
       icon: <PhoneIcon className="h-5 w-5" />,
       title: "Телефон",
       details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
-    },
-    {
-      icon: <ClockIcon className="h-5 w-5" />,
-      title: "Рабочие Часы",
-      details: ["Понедельник - Пятница: 9:00 - 18:00", "Суббота: 10:00 - 16:00"],
     },
   ];
   
@@ -226,17 +217,22 @@ const ContactSection = () => {
                 ))}
                 
                 <div className="mt-6 sm:mt-8">
-                  <div className="flex space-x-3 sm:space-x-4">
-                    {['twitter', 'facebook', 'instagram', 'linkedin', 'github'].map((social) => (
-                      <a 
-                        key={social}
-                        href="#" 
-                        className="text-[#00FF41] hover:text-[#00FFFF] transition-colors text-lg sm:text-xl p-2 hover:bg-[#0D0208]/50 rounded-full"
-                        aria-label={`Подписаться на ${social}`}
-                      >
-                        <i className={`fab fa-${social}${social === 'facebook' ? '-f' : social === 'linkedin' ? '-in' : ''}`}></i>
-                      </a>
-                    ))}
+                  <h4 className="text-white font-bold mb-3 text-sm sm:text-base">Мессенджеры</h4>
+                  <div className="flex space-x-4 sm:space-x-5">
+                    <a 
+                      href="#" 
+                      className="text-[#00FF41] hover:text-[#00FFFF] transition-colors text-xl sm:text-2xl p-2 hover:bg-[#0D0208]/50 rounded-full"
+                      aria-label="Написать в Telegram"
+                    >
+                      <FaTelegramPlane />
+                    </a>
+                    <a 
+                      href="#" 
+                      className="text-[#00FF41] hover:text-[#00FFFF] transition-colors text-xl sm:text-2xl p-2 hover:bg-[#0D0208]/50 rounded-full"
+                      aria-label="Написать в WhatsApp"
+                    >
+                      <FaWhatsapp />
+                    </a>
                   </div>
                 </div>
               </div>
