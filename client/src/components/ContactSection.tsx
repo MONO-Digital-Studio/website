@@ -44,13 +44,24 @@ const ContactSection = () => {
     mutationFn: (data: ContactFormValues) => {
       return apiRequest("POST", "/api/contact", data);
     },
-    onSuccess: (data) => {
+    onSuccess: (response: any) => {
+      // Сначала сбрасываем форму
+      form.reset();
+      
+      // Показываем сообщение об успешной отправке
       toast({
         title: "Сообщение отправлено!",
-        description: "Ваше сообщение успешно отправлено на hello@monostudio.site. Мы свяжемся с вами в ближайшее время.",
+        description: "Ваше сообщение успешно отправлено. Теперь вы будете перенаправлены в Telegram для прямого общения.",
         variant: "default",
       });
-      form.reset();
+      
+      // Если сервер вернул флаг для перенаправления на Telegram бота
+      if (response.redirectToTelegram && response.telegramBot) {
+        // Даем пользователю время прочитать сообщение и затем перенаправляем
+        setTimeout(() => {
+          window.open(`https://t.me/MONOStudioCRM_Bot`, '_blank');
+        }, 2000);
+      }
     },
     onError: (error: any) => {
       const errorMessage = error?.response?.data?.message || 

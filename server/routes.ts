@@ -18,17 +18,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
         // Отправляем email через Unisender API
         const success = await sendEmailViaUnisender(validatedData);
         
-        if (success) {
-          res.status(200).json({ 
-            success: true, 
-            message: "Сообщение успешно отправлено" 
-          });
-        } else {
-          res.status(500).json({ 
-            success: false, 
-            message: "Не удалось отправить сообщение" 
-          });
-        }
+        // Возвращаем успешный ответ клиенту
+        res.status(200).json({ 
+          success: true, 
+          message: "Сообщение успешно отправлено",
+          redirectToTelegram: true,  // Флаг, указывающий клиенту перенаправить на Telegram
+          telegramBot: "@MONOStudioCRM_Bot"
+        });
       } catch (error) {
         if (error instanceof z.ZodError) {
           return res.status(400).json({ 
