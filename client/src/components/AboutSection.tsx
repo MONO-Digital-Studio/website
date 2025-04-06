@@ -20,7 +20,7 @@ const AboutSection = () => {
         </motion.div>
         
         <motion.div 
-          className="bg-[#0D0208]/75 backdrop-blur-md rounded-lg p-8 mb-16 border border-[#00FF41] hover:border-[#00FFFF] transition-colors group"
+          className="bg-[#0D0208]/75 backdrop-blur-md rounded-lg p-8 mb-16 border border-[#00FF41] hover:border-white transition-colors group"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -76,33 +76,33 @@ const AboutSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h3 className="text-3xl md:text-4xl font-bold mb-4 font-['Courier_Prime']">
+          <h3 className="text-3xl md:text-4xl font-bold mb-4 font-['Roboto_Mono']">
             <span className="text-[#00FF41]">Рабочий</span> Процесс
           </h3>
           <div className="w-16 h-1 bg-[#00FF41] mx-auto mb-10"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-[#0D0208]/75 backdrop-blur-md p-6 rounded-lg border border-[#00FF41] hover:border-[#00FFFF] transition-colors group">
+            <div className="bg-[#0D0208]/75 backdrop-blur-md p-6 rounded-lg border border-[#00FF41] hover:border-white transition-colors group">
               <div className="h-16 w-16 rounded-full bg-[#008F11] flex items-center justify-center mx-auto mb-4">
                 <LightbulbIcon className="h-6 w-6 text-[#0D0208]" />
               </div>
               <h4 className="text-xl font-bold mb-3 text-white">Исследование</h4>
               <p className="text-gray-300 text-sm">Делаем бесплатный аудит, определяем цели и задачи для выбора оптимального решения.</p>
             </div>
-            <div className="bg-[#0D0208]/75 backdrop-blur-md p-6 rounded-lg border border-[#00FF41] hover:border-[#00FFFF] transition-colors group">
+            <div className="bg-[#0D0208]/75 backdrop-blur-md p-6 rounded-lg border border-[#00FF41] hover:border-white transition-colors group">
               <div className="h-16 w-16 rounded-full bg-[#008F11] flex items-center justify-center mx-auto mb-4">
                 <PencilRulerIcon className="h-6 w-6 text-[#0D0208]" />
               </div>
               <h4 className="text-xl font-bold mb-3 text-white">Дизайн</h4>
               <p className="text-gray-300 text-sm">Создаем интуитивно понятные и удобные для пользователя интерфейсы.</p>
             </div>
-            <div className="bg-[#0D0208]/75 backdrop-blur-md p-6 rounded-lg border border-[#00FF41] hover:border-[#00FFFF] transition-colors group">
+            <div className="bg-[#0D0208]/75 backdrop-blur-md p-6 rounded-lg border border-[#00FF41] hover:border-white transition-colors group">
               <div className="h-16 w-16 rounded-full bg-[#008F11] flex items-center justify-center mx-auto mb-4">
                 <CodeIcon className="h-6 w-6 text-[#0D0208]" />
               </div>
               <h4 className="text-xl font-bold mb-3 text-white">Разработка</h4>
               <p className="text-gray-300 text-sm">Разрабатываем надежные, масштабируемые и технологичные решения.</p>
             </div>
-            <div className="bg-[#0D0208]/75 backdrop-blur-md p-6 rounded-lg border border-[#00FF41] hover:border-[#00FFFF] transition-colors group">
+            <div className="bg-[#0D0208]/75 backdrop-blur-md p-6 rounded-lg border border-[#00FF41] hover:border-white transition-colors group">
               <div className="h-16 w-16 rounded-full bg-[#008F11] flex items-center justify-center mx-auto mb-4">
                 <RocketIcon className="h-6 w-6 text-[#0D0208]" />
               </div>
