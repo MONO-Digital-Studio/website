@@ -226,7 +226,6 @@ const ContactSection = () => {
                 ))}
                 
                 <div className="mt-6 sm:mt-8">
-                  <h4 className="text-white font-bold mb-3 sm:mb-4 text-base sm:text-lg">Наши Соцсети</h4>
                   <div className="flex space-x-3 sm:space-x-4">
                     {['twitter', 'facebook', 'instagram', 'linkedin', 'github'].map((social) => (
                       <a 
