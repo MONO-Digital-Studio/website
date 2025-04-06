@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { MailIcon, PhoneIcon } from "lucide-react";
 import { FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -72,12 +71,10 @@ const ContactSection = () => {
   
   const contactInfo = [
     {
-      icon: <MailIcon className="h-5 w-5" />,
       title: "Email",
       details: ["hello@monostudio.site"],
     },
     {
-      icon: <PhoneIcon className="h-5 w-5" />,
       title: "Телефон",
       details: ["+7 800 101 51 59"],
     },
@@ -202,21 +199,16 @@ const ContactSection = () => {
               <div className="space-y-4 sm:space-y-6 h-full flex flex-col">
                 <div className="space-y-4 sm:space-y-6 flex-grow">
                   {contactInfo.map((info, index) => (
-                    <div key={index} className="flex items-start md:justify-center">
-                      <div className="text-[#00FF41] mr-3 sm:mr-4 mt-1 flex-shrink-0">
-                        {info.icon}
-                      </div>
-                      <div>
-                        <h4 className="text-white font-bold mb-1 text-sm sm:text-base">{info.title}</h4>
-                        <p className="text-gray-300 text-sm sm:text-base">
-                          {info.details.map((line, idx) => (
-                            <span key={idx}>
-                              {line}
-                              {idx < info.details.length - 1 && <br />}
-                            </span>
-                          ))}
-                        </p>
-                      </div>
+                    <div key={index} className="md:justify-center">
+                      <h4 className="text-white font-bold mb-1 text-sm sm:text-base">{info.title}</h4>
+                      <p className="text-gray-300 text-sm sm:text-base">
+                        {info.details.map((line, idx) => (
+                          <span key={idx}>
+                            {line}
+                            {idx < info.details.length - 1 && <br />}
+                          </span>
+                        ))}
+                      </p>
                     </div>
                   ))}
                 </div>
