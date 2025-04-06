@@ -51,7 +51,7 @@ const services = [
     ]
   },
   {
-    title: "Цифровой маркетинг",
+    title: "Digital маркетинг",
     icon: <TrendingUpIcon className="w-9 h-9" />,
     description: "Стратегические услуги цифрового маркетинга для повышения видимости, вовлеченности и конверсии.",
     features: [
