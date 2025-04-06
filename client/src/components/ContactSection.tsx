@@ -220,11 +220,11 @@ const ContactSection = () => {
                   <h4 className="text-white font-bold mb-3 text-sm sm:text-base">Мессенджеры</h4>
                   <div className="flex space-x-4 sm:space-x-5">
                     <a 
-                      href="https://t.me/MONO_LeadsBot" 
+                      href="https://t.me/MONOStudioCRM_Bot" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#00FF41] hover:text-[#00FFFF] transition-colors text-xl sm:text-2xl p-2 hover:bg-[#0D0208]/50 rounded-full"
-                      aria-label="Написать в Telegram бот @MONO_LeadsBot"
+                      aria-label="Написать в Telegram бот @MONOStudioCRM_Bot"
                     >
                       <FaTelegramPlane />
                     </a>
