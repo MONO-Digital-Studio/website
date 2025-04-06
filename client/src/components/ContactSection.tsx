@@ -212,28 +212,30 @@ const ContactSection = () => {
                 </div>
                 
                 <div className="mt-auto pt-6 sm:pt-8 border-t border-[#008F11]/30">
-                  <h4 className="text-[#00FF41] font-bold mb-3 text-sm sm:text-base">Мессенджеры</h4>
-                  <div className="flex items-center gap-4 sm:gap-5 md:justify-center">
-                    <a 
-                      href="https://t.me/MONOStudioCRM_Bot" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-[#0D0208]/50 text-[#00FF41] hover:text-[#00FFFF] hover:bg-[#0D0208]/80 transition-all text-lg sm:text-xl p-3 rounded-md flex items-center"
-                      aria-label="Написать в Telegram бот @MONOStudioCRM_Bot"
-                    >
-                      <FaTelegramPlane className="mr-2" />
-                      <span>Telegram</span>
-                    </a>
-                    <a 
-                      href="https://wa.me/message/TXZPIWUQEWARP1" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-[#0D0208]/50 text-[#00FF41] hover:text-[#00FFFF] hover:bg-[#0D0208]/80 transition-all text-lg sm:text-xl p-3 rounded-md flex items-center"
-                      aria-label="Написать в WhatsApp"
-                    >
-                      <FaWhatsapp className="mr-2" />
-                      <span>WhatsApp</span>
-                    </a>
+                  <h4 className="text-[#00FF41] font-bold mb-3 text-sm sm:text-base md:text-center">Мессенджеры</h4>
+                  <div className="md:text-center">
+                    <div className="inline-flex items-center gap-4 sm:gap-5 justify-center">
+                      <a 
+                        href="https://t.me/MONOStudioCRM_Bot" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#0D0208]/50 text-[#00FF41] hover:text-[#00FFFF] hover:bg-[#0D0208]/80 transition-all text-lg sm:text-xl p-3 rounded-md flex items-center"
+                        aria-label="Написать в Telegram бот @MONOStudioCRM_Bot"
+                      >
+                        <FaTelegramPlane className="mr-2" />
+                        <span>Telegram</span>
+                      </a>
+                      <a 
+                        href="https://wa.me/message/TXZPIWUQEWARP1" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#0D0208]/50 text-[#00FF41] hover:text-[#00FFFF] hover:bg-[#0D0208]/80 transition-all text-lg sm:text-xl p-3 rounded-md flex items-center"
+                        aria-label="Написать в WhatsApp"
+                      >
+                        <FaWhatsapp className="mr-2" />
+                        <span>WhatsApp</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
