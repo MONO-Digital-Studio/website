@@ -115,7 +115,6 @@ const ContactSection = () => {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-white">Имя</FormLabel>
                           <FormControl>
                             <Input 
                               placeholder="Ваше имя" 
@@ -132,7 +131,6 @@ const ContactSection = () => {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-white">Email</FormLabel>
                           <FormControl>
                             <Input 
                               placeholder="Ваш email" 
@@ -150,7 +148,6 @@ const ContactSection = () => {
                     name="subject"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white">Тема</FormLabel>
                         <FormControl>
                           <Input 
                             placeholder="Тема сообщения" 
@@ -167,7 +164,6 @@ const ContactSection = () => {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white">Сообщение</FormLabel>
                         <FormControl>
                           <Textarea 
                             placeholder="Ваше сообщение..." 
