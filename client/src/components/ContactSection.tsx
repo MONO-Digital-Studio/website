@@ -90,7 +90,7 @@ const ContactSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="text-[#00FF41] text-sm mb-2 font-['Roboto_Mono']">// СВЯЖИТЕСЬ С НАМИ</div>
+
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-['Courier_Prime']">
             Связаться <span className="text-[#00FF41]">С Нами</span>
           </h2>
