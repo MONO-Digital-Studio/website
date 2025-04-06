@@ -229,7 +229,9 @@ const ContactSection = () => {
                       <FaTelegramPlane />
                     </a>
                     <a 
-                      href="#" 
+                      href="https://wa.me/message/TXZPIWUQEWARP1" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-[#00FF41] hover:text-[#00FFFF] transition-colors text-xl sm:text-2xl p-2 hover:bg-[#0D0208]/50 rounded-full"
                       aria-label="Написать в WhatsApp"
                     >
