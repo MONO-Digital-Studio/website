@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { 
   MonitorIcon, PaletteIcon, SmartphoneIcon, 
   ShoppingCartIcon, TrendingUpIcon, SettingsIcon, 
-  ChevronRightIcon 
+  ChevronRightIcon, LayersIcon
 } from "lucide-react";
 
 const services = [
@@ -41,7 +41,7 @@ const services = [
   },
   {
     title: "Комплексные решения",
-    icon: <ShoppingCartIcon className="w-9 h-9" />,
+    icon: <LayersIcon className="w-9 h-9" />,
     description: "Внедрение комплексной автоматизации для увеличения продаж и улучшения клиентского опыта.",
     features: [
       "Индивидуальные сайты",
