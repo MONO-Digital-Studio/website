@@ -57,7 +57,7 @@ const Header = () => {
           <div className="block lg:hidden">
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-[#00FF41] hover:text-[#00FFFF] transition-colors focus:outline-none"
+              className="text-[#00FF41] hover:text-white transition-colors focus:outline-none"
               aria-label="Toggle menu"
             >
               <Menu className="h-6 w-6" />

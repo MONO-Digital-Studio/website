@@ -223,7 +223,7 @@ const ContactSection = () => {
                       href="https://t.me/MONOStudioCRM_Bot" 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-[#0D0208]/50 text-[#00FF41] hover:text-[#00FFFF] hover:bg-[#0D0208]/80 transition-all text-lg sm:text-xl p-3 rounded-md flex items-center"
+                      className="bg-[#0D0208]/50 text-[#00FF41] hover:text-white hover:bg-[#0D0208]/80 transition-all text-lg sm:text-xl p-3 rounded-md flex items-center"
                       aria-label="Написать в Telegram бот @MONOStudioCRM_Bot"
                     >
                       <FaTelegramPlane className="mr-2" />
@@ -233,7 +233,7 @@ const ContactSection = () => {
                       href="https://wa.me/message/TXZPIWUQEWARP1" 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-[#0D0208]/50 text-[#00FF41] hover:text-[#00FFFF] hover:bg-[#0D0208]/80 transition-all text-lg sm:text-xl p-3 rounded-md flex items-center"
+                      className="bg-[#0D0208]/50 text-[#00FF41] hover:text-white hover:bg-[#0D0208]/80 transition-all text-lg sm:text-xl p-3 rounded-md flex items-center"
                       aria-label="Написать в WhatsApp"
                     >
                       <FaWhatsapp className="mr-2" />

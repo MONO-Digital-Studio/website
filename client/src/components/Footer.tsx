@@ -74,7 +74,7 @@ const Footer = () => {
                 <a 
                   key={social}
                   href="#" 
-                  className="text-[#00FF41] hover:text-[#00FFFF] transition-colors"
+                  className="text-[#00FF41] hover:text-white transition-colors"
                   aria-label={`Подписаться на ${social}`}
                 >
                   <i className={`fab fa-${social}${social === 'facebook' ? '-f' : social === 'linkedin' ? '-in' : ''}`}></i>

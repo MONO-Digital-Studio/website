@@ -34,7 +34,7 @@ const HeroSection = () => {
             className="lg:w-1/2 mb-10 lg:mb-0"
             variants={itemVariants}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-['Courier_Prime']">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-['Roboto_Mono']">
               <span className="text-white">Создаем</span>
               <span className="text-[#00FF41] block leading-tight"> Цифровые Впечатления</span>
             </h2>
@@ -51,7 +51,7 @@ const HeroSection = () => {
               </a>
               <a 
                 href="#portfolio" 
-                className="border-2 border-[#00FF41] text-[#00FF41] px-6 py-3 rounded font-bold transition-all hover:bg-[#0D0208] hover:text-[#00FFFF] hover:border-[#00FFFF]"
+                className="border-2 border-[#00FF41] text-[#00FF41] px-6 py-3 rounded font-bold transition-all hover:bg-[#0D0208] hover:text-white hover:border-white"
               >
                 Кейсы
               </a>
@@ -62,7 +62,7 @@ const HeroSection = () => {
             className="lg:w-1/2 relative"
             variants={itemVariants}
           >
-            <div className="relative rounded-lg overflow-hidden border border-[#00FF41] hover:border-[#00FFFF] transition-colors group">
+            <div className="relative rounded-lg overflow-hidden border border-[#00FF41] hover:border-white transition-colors group">
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-[#00FF41]/10 via-transparent to-[#00FF41]/10 transition-opacity duration-700"></div>
               <div className="bg-[#0D0208]/75 backdrop-blur-md rounded-lg p-6 md:p-10">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
@@ -81,7 +81,7 @@ const HeroSection = () => {
                 </div>
                 <div className="relative">
                   <div className="text-[#00FF41] text-sm mb-2 font-['Roboto_Mono']">// РЕШЕНИЯ НА БАЗЕ ИИ</div>
-                  <h3 className="text-white text-2xl mb-4 font-bold font-['Courier_Prime']">Преимущества <span className="text-[#00FF41]">MONO</span></h3>
+                  <h3 className="text-white text-2xl mb-4 font-bold font-['Roboto_Mono']">Преимущества <span className="text-[#00FF41]">MONO</span></h3>
                   <ul className="text-gray-300 space-y-3">
                     <li className="flex items-start">
                       <span className="text-[#00FF41] mr-2">{'>'}</span> 

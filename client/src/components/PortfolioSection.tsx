@@ -127,7 +127,7 @@ const PortfolioSection = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
-                className="border border-[#00FF41] hover:border-[#00FFFF] transition-colors rounded-lg overflow-hidden transform hover:-translate-y-2 duration-300"
+                className="border border-[#00FF41] hover:border-white transition-colors rounded-lg overflow-hidden transform hover:-translate-y-2 duration-300"
               >
                 <div className="bg-[#0D0208]/75 backdrop-blur-md rounded-lg overflow-hidden">
                   <div className="relative group">
