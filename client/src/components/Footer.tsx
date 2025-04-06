@@ -64,7 +64,7 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            <h3 className="text-xl font-bold mb-4 text-white font-['Courier_Prime']">MONO Digital Studio</h3>
+            <h3 className="text-xl font-bold mb-4 text-[#00FF41] font-['Courier_Prime']">MONO Digital Studio</h3>
             <p className="text-gray-300 mb-6">Создаем цифровые решения, которые превосходят ожидания.</p>
             <div className="flex space-x-4">
               {['twitter', 'facebook', 'instagram', 'linkedin'].map((social) => (
@@ -86,7 +86,7 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            <h4 className="text-lg font-bold mb-4 text-white font-['Courier_Prime']">Навигация</h4>
+            <h4 className="text-lg font-bold mb-4 text-[#00FF41] font-['Courier_Prime']">Навигация</h4>
             <ul className="space-y-2">
               {['Главная', 'О Нас', 'Услуги', 'Портфолио', 'Контакты'].map((link, index) => (
                 <li key={link}>
@@ -107,7 +107,7 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            <h4 className="text-lg font-bold mb-4 text-white font-['Courier_Prime']">Услуги</h4>
+            <h4 className="text-lg font-bold mb-4 text-[#00FF41] font-['Courier_Prime']">Услуги</h4>
             <ul className="space-y-2">
               {[
                 'Веб-разработка', 
@@ -134,7 +134,7 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            <h4 className="text-lg font-bold mb-4 text-white font-['Courier_Prime']">Новости</h4>
+            <h4 className="text-lg font-bold mb-4 text-[#00FF41] font-['Courier_Prime']">Новости</h4>
             <p className="text-gray-300 mb-4">Подпишитесь на нашу рассылку для получения последних обновлений и новостей.</p>
             <form className="flex" onSubmit={handleSubmit}>
               <input 
