@@ -92,7 +92,7 @@ const ContactSection = () => {
         >
 
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-['Courier_Prime']">
-            СВЯЖИТЕСЬ <span className="text-[#00FF41]">С НАМИ</span>
+            Свяжитесь <span className="text-[#00FF41]">с Нами</span>
           </h2>
           <div className="w-16 h-1 bg-[#00FF41] mx-auto"></div>
         </motion.div>
