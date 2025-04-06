@@ -76,7 +76,7 @@ const AboutSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h3 className="text-2xl font-bold mb-10 font-['Courier_Prime']">
+          <h3 className="text-3xl md:text-4xl font-bold mb-10 font-['Courier_Prime']">
             <span className="text-[#00FF41]">Рабочий</span> Процесс
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
