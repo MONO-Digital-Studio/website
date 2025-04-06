@@ -71,7 +71,7 @@ const ContactSection = () => {
     {
       icon: <MailIcon className="h-5 w-5" />,
       title: "Email",
-      details: ["info@monodigitalstudio.com"],
+      details: ["hello@monostudio.site"],
     },
     {
       icon: <PhoneIcon className="h-5 w-5" />,
