@@ -120,7 +120,7 @@ const ContactSection = () => {
                               <Input 
                                 placeholder="Ваше имя" 
                                 {...field} 
-                                className="bg-[#0D0208] border-[#008F11] focus:border-[#00FF41] text-white"
+                                className="bg-[#0D0208] border-[#008F11] focus:border-white text-white"
                               />
                             </FormControl>
                             <FormMessage />
@@ -136,7 +136,7 @@ const ContactSection = () => {
                               <Input 
                                 placeholder="Ваш email" 
                                 {...field} 
-                                className="bg-[#0D0208] border-[#008F11] focus:border-[#00FF41] text-white"
+                                className="bg-[#0D0208] border-[#008F11] focus:border-white text-white"
                               />
                             </FormControl>
                             <FormMessage />
@@ -153,7 +153,7 @@ const ContactSection = () => {
                             <Input 
                               placeholder="Тема сообщения" 
                               {...field} 
-                              className="bg-[#0D0208] border-[#008F11] focus:border-[#00FF41] text-white"
+                              className="bg-[#0D0208] border-[#008F11] focus:border-white text-white"
                             />
                           </FormControl>
                           <FormMessage />
@@ -170,7 +170,7 @@ const ContactSection = () => {
                               placeholder="Ваше сообщение..." 
                               rows={4} 
                               {...field} 
-                              className="bg-[#0D0208] border-[#008F11] focus:border-[#00FF41] text-white resize-none sm:rows-6"
+                              className="bg-[#0D0208] border-[#008F11] focus:border-white text-white resize-none sm:rows-6"
                             />
                           </FormControl>
                           <FormMessage />

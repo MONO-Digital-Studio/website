@@ -96,7 +96,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <motion.div 
               key={index}
-              className="bg-[#0D0208]/75 backdrop-blur-md rounded-lg overflow-hidden border border-[#00FF41] hover:border-[#00FFFF] transition-colors group"
+              className="bg-[#0D0208]/75 backdrop-blur-md rounded-lg overflow-hidden border border-[#00FF41] hover:border-white transition-colors group"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -116,7 +116,7 @@ const ServicesSection = () => {
                     </li>
                   ))}
                 </ul>
-                <a href="#contact" className="inline-flex items-center text-[#00FF41] hover:text-[#00FFFF] transition-colors">
+                <a href="#contact" className="inline-flex items-center text-[#00FF41] hover:text-white transition-colors">
                   Узнать больше <ChevronRightIcon className="ml-1 h-4 w-4" />
                 </a>
               </div>
