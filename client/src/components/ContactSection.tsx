@@ -199,46 +199,50 @@ const ContactSection = () => {
             
             <div>
               <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">Контакты</h3>
-              <div className="space-y-4 sm:space-y-6">
-                {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="text-[#00FF41] mr-3 sm:mr-4 mt-1 flex-shrink-0">
-                      {info.icon}
+              <div className="space-y-4 sm:space-y-6 h-full flex flex-col">
+                <div className="space-y-4 sm:space-y-6 flex-grow">
+                  {contactInfo.map((info, index) => (
+                    <div key={index} className="flex items-start">
+                      <div className="text-[#00FF41] mr-3 sm:mr-4 mt-1 flex-shrink-0">
+                        {info.icon}
+                      </div>
+                      <div>
+                        <h4 className="text-white font-bold mb-1 text-sm sm:text-base">{info.title}</h4>
+                        <p className="text-gray-300 text-sm sm:text-base">
+                          {info.details.map((line, idx) => (
+                            <span key={idx}>
+                              {line}
+                              {idx < info.details.length - 1 && <br />}
+                            </span>
+                          ))}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="text-white font-bold mb-1 text-sm sm:text-base">{info.title}</h4>
-                      <p className="text-gray-300 text-sm sm:text-base">
-                        {info.details.map((line, idx) => (
-                          <span key={idx}>
-                            {line}
-                            {idx < info.details.length - 1 && <br />}
-                          </span>
-                        ))}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
                 
-                <div className="mt-6 sm:mt-8">
+                <div className="mt-auto pt-6 sm:pt-8 border-t border-[#008F11]/30">
                   <h4 className="text-white font-bold mb-3 text-sm sm:text-base">Мессенджеры</h4>
-                  <div className="flex space-x-4 sm:space-x-5">
+                  <div className="flex items-center gap-4 sm:gap-5">
                     <a 
                       href="https://t.me/MONOStudioCRM_Bot" 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#00FF41] hover:text-[#00FFFF] transition-colors text-xl sm:text-2xl p-2 hover:bg-[#0D0208]/50 rounded-full"
+                      className="bg-[#0D0208]/50 text-[#00FF41] hover:text-[#00FFFF] hover:bg-[#0D0208]/80 transition-all text-lg sm:text-xl p-3 rounded-md flex items-center"
                       aria-label="Написать в Telegram бот @MONOStudioCRM_Bot"
                     >
-                      <FaTelegramPlane />
+                      <FaTelegramPlane className="mr-2" />
+                      <span>Telegram</span>
                     </a>
                     <a 
                       href="https://wa.me/message/TXZPIWUQEWARP1" 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#00FF41] hover:text-[#00FFFF] transition-colors text-xl sm:text-2xl p-2 hover:bg-[#0D0208]/50 rounded-full"
+                      className="bg-[#0D0208]/50 text-[#00FF41] hover:text-[#00FFFF] hover:bg-[#0D0208]/80 transition-all text-lg sm:text-xl p-3 rounded-md flex items-center"
                       aria-label="Написать в WhatsApp"
                     >
-                      <FaWhatsapp />
+                      <FaWhatsapp className="mr-2" />
+                      <span>WhatsApp</span>
                     </a>
                   </div>
                 </div>
