@@ -107,7 +107,7 @@ const AboutSection = () => {
                 <RocketIcon className="h-6 w-6 text-[#0D0208]" />
               </div>
               <h4 className="text-xl font-bold mb-3 text-white">Внедрение</h4>
-              <p className="text-gray-300 text-sm">Мы запускаем ваш проект с комплексным тестированием и постоянной поддержкой.</p>
+              <p className="text-gray-300 text-sm">Запускаем проект с комплексным тестированием, гарантией и сопровождением.</p>
             </div>
           </div>
         </motion.div>
