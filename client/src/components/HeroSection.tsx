@@ -84,19 +84,19 @@ const HeroSection = () => {
                   <ul className="text-gray-300 space-y-3">
                     <li className="flex items-start">
                       <span className="text-[#00FF41] mr-2">{'>'}</span> 
-                      <span>Интеграция передовых технологий</span>
+                      <span>Передовые технологии</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-[#00FF41] mr-2">{'>'}</span> 
-                      <span>Креативный подход к дизайну</span>
+                      <span>Креативный подход</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-[#00FF41] mr-2">{'>'}</span> 
-                      <span>Разработка с фокусом на решение задач</span>
+                      <span>Фокус на результат</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-[#00FF41] mr-2">{'>'}</span> 
-                      <span>Экспертиза в цифровой трансформации</span>
+                      <span>Полный цикл услуг под ключ</span>
                     </li>
                   </ul>
                 </div>
