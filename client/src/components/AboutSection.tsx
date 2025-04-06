@@ -38,7 +38,7 @@ const AboutSection = () => {
                 <span className="px-3 py-1 rounded bg-[#0D0208] border border-[#00FF41] text-[#00FF41]">Веб-разработка</span>
                 <span className="px-3 py-1 rounded bg-[#0D0208] border border-[#00FF41] text-[#00FF41]">UI/UX Дизайн</span>
                 <span className="px-3 py-1 rounded bg-[#0D0208] border border-[#00FF41] text-[#00FF41]">Цифровая стратегия</span>
-                <span className="px-3 py-1 rounded bg-[#0D0208] border border-[#00FF41] text-[#00FF41]">Электронная коммерция</span>
+                <span className="px-3 py-1 rounded bg-[#0D0208] border border-[#00FF41] text-[#00FF41]">Цифровая экосистема</span>
                 <span className="px-3 py-1 rounded bg-[#0D0208] border border-[#00FF41] text-[#00FF41]">Разработка приложений</span>
               </div>
             </div>
