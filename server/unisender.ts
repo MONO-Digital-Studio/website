@@ -3,45 +3,7 @@ import axios from 'axios';
 // API ключ для Unisender
 const UNISENDER_API_KEY = '63bq5nomq97fazoidmqxk3a3ftnn59fj5stgsxxy';
 
-/**
- * Добавляет email в список рассылки Unisender
- */
-export async function subscribeToNewsletter(email: string): Promise<boolean> {
-  try {
-    // Формируем параметры для API запроса к Unisender
-    const apiParams = new URLSearchParams();
-    apiParams.append('api_key', UNISENDER_API_KEY);
-    apiParams.append('format', 'json');
-    apiParams.append('list_ids', '1'); // ID списка по умолчанию
-    apiParams.append('fields[email]', email);
-    apiParams.append('double_optin', '0'); // Без двойного подтверждения
-    apiParams.append('overwrite', '2'); // Обновить контакт, если он уже существует
 
-    // Отправляем запрос на Unisender API
-    const response = await axios.post(
-      'https://api.unisender.com/ru/api/subscribe',
-      apiParams.toString(),
-      {
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        }
-      }
-    );
-
-    // Проверяем успешность запроса
-    if (response.data.result) {
-      console.log('Подписка успешно выполнена:', response.data);
-      return true;
-    } else {
-      console.error('Ошибка при подписке на рассылку:', response.data.error);
-      return false;
-    }
-
-  } catch (error) {
-    console.error('Ошибка при подписке через Unisender:', error);
-    return false;
-  }
-}
 
 /**
  * Отправляет email через Unisender API

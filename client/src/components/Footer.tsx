@@ -1,59 +1,6 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
-import { useToast } from "@/hooks/use-toast";
-import { z } from "zod";
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
-  const { toast } = useToast();
-  
-  // Мутация для подписки на рассылку
-  const subscribeMutation = useMutation({
-    mutationFn: (email: string) => {
-      return apiRequest("POST", "/api/subscribe", { email });
-    },
-    onSuccess: () => {
-      toast({
-        title: "Подписка оформлена!",
-        description: "Вы успешно подписались на нашу рассылку.",
-        variant: "default",
-      });
-      setEmail("");
-    },
-    onError: (error: any) => {
-      const errorMessage = error?.response?.data?.message || 
-                           error?.message || 
-                           "Произошла ошибка при оформлении подписки.";
-      
-      toast({
-        title: "Ошибка",
-        description: errorMessage,
-        variant: "destructive",
-      });
-    },
-  });
-  
-  // Обработчик отправки формы
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Проверка на валидность email
-    try {
-      const emailSchema = z.string().email({ message: "Пожалуйста, введите корректный email" });
-      emailSchema.parse(email);
-      
-      // Отправка запроса на подписку
-      subscribeMutation.mutate(email);
-    } catch (error) {
-      toast({
-        title: "Ошибка",
-        description: "Пожалуйста, введите корректный email адрес",
-        variant: "destructive",
-      });
-    }
-  };
   return (
     <footer className="py-6 sm:py-8 md:py-10 relative bg-[#0D0208]/75 backdrop-blur-md border-t border-[#008F11]/30">
       <div className="container mx-auto px-3 sm:px-4">
@@ -129,48 +76,6 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            <h4 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-[#00FF41] font-['Courier_Prime']">Новости</h4>
-            <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">Подпишитесь на нашу рассылку для получения последних обновлений и новостей.</p>
-            <form className="flex" onSubmit={handleSubmit}>
-              <input 
-                type="email" 
-                placeholder="Ваш email" 
-                className="bg-[#0D0208] border border-[#008F11] focus:border-[#00FF41] rounded-l p-2 text-white flex-grow focus:outline-none text-sm sm:text-base h-9 sm:h-10"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                disabled={subscribeMutation.isPending}
-                required
-              />
-              <button 
-                type="submit" 
-                className={`${
-                  subscribeMutation.isPending 
-                    ? "bg-[#008F11]/50 cursor-wait" 
-                    : "bg-[#00FF41] hover:bg-[#008F11]"
-                } text-[#0D0208] hover:text-white px-3 sm:px-4 rounded-r font-bold transition-all h-9 sm:h-10 flex items-center justify-center`}
-                aria-label="Подписаться"
-                disabled={subscribeMutation.isPending}
-              >
-                {subscribeMutation.isPending ? (
-                  <span className="flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6">
-                    <svg className="animate-spin h-3 w-3 sm:h-4 sm:w-4 text-[#0D0208]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                  </span>
-                ) : (
-                  <i className="fas fa-paper-plane text-sm sm:text-base"></i>
-                )}
-              </button>
-            </form>
           </motion.div>
         </div>
         
