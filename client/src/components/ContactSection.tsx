@@ -75,7 +75,24 @@ const ContactSection = () => {
   });
   
   function onSubmit(data: ContactFormValues) {
-    contactMutation.mutate(data);
+    // Проверяем, работаем ли мы с API (для Replit) или без API (для GitHub Pages)
+    if (import.meta.env.MODE === 'development' || window.location.hostname === 'localhost') {
+      // В режиме разработки используем API
+      contactMutation.mutate(data);
+    } else {
+      // В режиме GitHub Pages просто показываем сообщение
+      form.reset();
+      toast({
+        title: "Спасибо за ваше сообщение!",
+        description: "Для отправки сообщения, пожалуйста, воспользуйтесь нашим Telegram ботом @MONOStudioCRM_Bot или напишите нам на email: hello@monostudio.site",
+        variant: "default",
+      });
+      
+      // Открываем Telegram
+      setTimeout(() => {
+        window.open("https://t.me/MONOStudioCRM_Bot", "_blank");
+      }, 1500);
+    }
   }
   
   const contactInfo = [

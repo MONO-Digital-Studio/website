@@ -44,6 +44,38 @@
   - /supabase.ts - Интеграция с Supabase
 - /shared - Общие типы и схемы данных
 
+## Деплой на GitHub Pages
+
+Для деплоя сайта на GitHub Pages с кастомным доменом выполните следующие шаги:
+
+1. **Сборка статических файлов:**
+   ```bash
+   npm run build
+   ```
+
+2. **Настройка GitHub Pages:**
+   - Создайте репозиторий на GitHub (например, https://github.com/AndreyShinkarenko/mono-digital-studio-website)
+   - Загрузите код в репозиторий включая файл CNAME с доменом `monostudio.site`
+   - В настройках репозитория (Settings) перейдите в раздел Pages
+   - В разделе "Build and deployment" выберите "Deploy from a branch"
+   - Выберите ветку "main" и директорию "/docs" или "/(root)"
+   - Нажмите "Save"
+
+3. **Настройка DNS для кастомного домена:**
+   - В DNS-записях вашего домена monostudio.site добавьте следующие CNAME-записи:
+     ```
+     CNAME @ username.github.io
+     CNAME www username.github.io
+     ```
+     где `username` - это ваше имя пользователя на GitHub
+   - Подождите до 24 часов для полного обновления DNS-записей
+
+4. **Проверка настройки HTTPS:**
+   - В настройках GitHub Pages убедитесь, что опция "Enforce HTTPS" включена
+   - GitHub автоматически выпустит SSL-сертификат для вашего домена
+
+После успешного деплоя сайт будет доступен по адресу https://monostudio.site
+
 ## Разработано для MONO Digital Studio
 
 © MONO Digital Studio, 2025
