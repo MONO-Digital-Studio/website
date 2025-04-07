@@ -1,6 +1,6 @@
 # MONO Digital Studio - Официальный сайт
 
-![MONO Digital Studio Logo](./generated-icon.png)
+![MONO Digital Studio Logo](./mono-logo.png)
 
 Официальный сайт-визитка для студии цифровых решений и ИИ-разработки "MONO Digital Studio".
 
