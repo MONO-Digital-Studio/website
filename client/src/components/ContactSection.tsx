@@ -50,6 +50,7 @@ const ContactSection = () => {
       
       // Получаем информацию о результате отправки
       const telegramSent = response?.telegramSent;
+      const supabaseSaved = response?.supabaseSaved;
       
       // Показываем сообщение об успешной отправке
       toast({
@@ -57,6 +58,8 @@ const ContactSection = () => {
         description: "Ваше сообщение успешно отправлено в наш Telegram бот @MONOStudioCRM_Bot. Мы свяжемся с вами в ближайшее время.",
         variant: "default",
       });
+      
+      console.log('Результаты отправки:', { telegramSent, supabaseSaved });
     },
     onError: (error: any) => {
       const errorMessage = error?.response?.data?.message || 
