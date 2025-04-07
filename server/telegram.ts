@@ -8,7 +8,7 @@ const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}`;
 
 /**
- * Отправляет сообщение в Telegram бот
+ * Отправляет сообщение в Telegram бот @MONO_LeadsBot
  */
 export async function sendMessageToTelegram(
   params: {
@@ -27,7 +27,7 @@ export async function sendMessageToTelegram(
 
     // Формируем текст сообщения в формате Markdown
     const messageText = `
-*Новое сообщение с сайта MONO Digital Studio*
+*Новая заявка с сайта MONO Digital Studio*
 
 *Имя:* ${params.name}
 *Email:* ${params.email}
