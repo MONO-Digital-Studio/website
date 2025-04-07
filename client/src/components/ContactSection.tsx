@@ -45,23 +45,15 @@ const ContactSection = () => {
       return apiRequest("POST", "/api/contact", data);
     },
     onSuccess: (response: any) => {
-      // Сначала сбрасываем форму
+      // Сбрасываем форму
       form.reset();
       
       // Показываем сообщение об успешной отправке
       toast({
         title: "Сообщение отправлено!",
-        description: "Ваше сообщение успешно отправлено. Теперь вы будете перенаправлены в Telegram для прямого общения.",
+        description: "Ваше сообщение успешно отправлено на электронную почту monostud.io@yandex.ru. Мы свяжемся с вами в ближайшее время.",
         variant: "default",
       });
-      
-      // Если сервер вернул флаг для перенаправления на Telegram бота
-      if (response.redirectToTelegram && response.telegramBot) {
-        // Даем пользователю время прочитать сообщение и затем перенаправляем
-        setTimeout(() => {
-          window.open(`https://t.me/MONOStudioCRM_Bot`, '_blank');
-        }, 2000);
-      }
     },
     onError: (error: any) => {
       const errorMessage = error?.response?.data?.message || 
@@ -83,7 +75,7 @@ const ContactSection = () => {
   const contactInfo = [
     {
       title: "Email",
-      details: ["hello@monostudio.site"],
+      details: ["monostud.io@yandex.ru"],
     },
     {
       title: "Телефон",

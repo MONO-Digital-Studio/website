@@ -19,12 +19,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
         const success = await sendEmailViaUnisender(validatedData);
         
         // Возвращаем успешный ответ клиенту
-        res.status(200).json({ 
-          success: true, 
-          message: "Сообщение успешно отправлено",
-          redirectToTelegram: true,  // Флаг, указывающий клиенту перенаправить на Telegram
-          telegramBot: "@MONOStudioCRM_Bot"
-        });
+        if (success) {
+          res.status(200).json({ 
+            success: true, 
+            message: "Сообщение успешно отправлено на monostud.io@yandex.ru",
+            redirectToTelegram: false  // Не перенаправляем на Telegram
+          });
+        } else {
+          res.status(500).json({ 
+            success: false, 
+            message: "Не удалось отправить сообщение" 
+          });
+        }
       } catch (error) {
         if (error instanceof z.ZodError) {
           return res.status(400).json({ 

@@ -69,7 +69,7 @@ export async function sendEmailViaUnisender(
     const apiParams = new URLSearchParams();
     apiParams.append('api_key', UNISENDER_API_KEY);
     apiParams.append('format', 'json');
-    apiParams.append('email', 'hello@monostudio.site');
+    apiParams.append('email', 'monostud.io@yandex.ru');
     apiParams.append('sender_name', 'MONO Digital Studio Website');
     apiParams.append('sender_email', params.email);
     apiParams.append('subject', `Новое сообщение: ${params.subject}`);
