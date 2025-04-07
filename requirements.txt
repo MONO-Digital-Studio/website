@@ -1,0 +1,31 @@
+# Основные зависимости проекта MONO Digital Studio
+
+# Версии Node.js и npm
+node>=18.0.0
+npm>=8.0.0
+
+# Frontend зависимости
+react
+react-dom
+typescript
+tailwindcss
+framer-motion
+@tanstack/react-query
+react-hook-form
+zod
+@hookform/resolvers/zod
+wouter
+
+# Backend зависимости
+express
+zod-express-middleware
+axios
+
+# Дополнительные библиотеки
+react-icons
+lucide-react
+class-variance-authority
+clsx
+tailwind-merge
+date-fns
+recharts
