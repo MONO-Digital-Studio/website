@@ -18,7 +18,7 @@ const Footer = () => {
               <span className="text-white">Digital Studio</span>
             </h3>
             <p className="text-gray-300 mb-2 sm:mb-3 text-sm sm:text-base">
-              Создаем цифровые решения, которые превосходят ожидания
+              Создаем комплексные решения, которые превосходят ожидания
             </p>
             <p className="text-[#00FF41] mb-4 sm:mb-5 text-sm sm:text-base font-bold">
               Create Your Future In MONO
