@@ -87,7 +87,7 @@ const Footer = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <p className="text-gray-300 text-xs sm:text-sm mb-2 sm:mb-4 md:mb-0">&copy; {new Date().getFullYear()} <span className="text-[#00FF41]">MONO</span> <span className="text-white">Digital Studio</span>. Все права защищены.</p>
-          <p className="text-gray-300 text-xs sm:text-sm text-center md:text-right">ИП Шинкаренко Андрей Александрович<br className="sm:hidden" /> ОГРНИП: 315595800025579</p>
+          <p className="text-gray-300 text-xs sm:text-sm text-center md:text-right">ИП Шинкаренко А.А.<br className="sm:hidden" /> ОГРНИП 315595800025579</p>
         </motion.div>
       </div>
     </footer>
