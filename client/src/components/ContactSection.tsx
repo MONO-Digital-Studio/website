@@ -54,7 +54,7 @@ const ContactSection = () => {
       // Показываем сообщение об успешной отправке
       toast({
         title: "Сообщение отправлено!",
-        description: "Ваше сообщение успешно отправлено в наш Telegram бот. Мы свяжемся с вами в ближайшее время.",
+        description: "Ваше сообщение успешно отправлено в наш Telegram бот @MONOStudioCRM_Bot. Мы свяжемся с вами в ближайшее время.",
         variant: "default",
       });
     },
@@ -225,11 +225,11 @@ const ContactSection = () => {
                 <div className="md:text-center flex md:justify-center">
                   <div className="inline-flex items-center gap-2 sm:gap-4 md:gap-5 justify-center w-full">
                     <a 
-                      href="https://t.me/MONO_LeadsBot" 
+                      href="https://t.me/MONOStudioCRM_Bot" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-[#0D0208]/50 text-[#00FF41] hover:text-white hover:bg-[#0D0208]/80 transition-all text-sm sm:text-base md:text-lg p-2 sm:p-3 rounded-md flex items-center flex-1 justify-center"
-                      aria-label="Написать в Telegram бот @MONO_LeadsBot"
+                      aria-label="Написать в Telegram бот @MONOStudioCRM_Bot"
                     >
                       <FaTelegramPlane className="mr-1 sm:mr-2" />
                       <span>Telegram</span>

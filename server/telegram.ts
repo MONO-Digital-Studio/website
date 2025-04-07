@@ -8,7 +8,7 @@ const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}`;
 
 /**
- * Отправляет сообщение в Telegram бот @MONO_LeadsBot
+ * Отправляет сообщение в Telegram бот @MONOStudioCRM_Bot
  */
 export async function sendMessageToTelegram(
   params: {
