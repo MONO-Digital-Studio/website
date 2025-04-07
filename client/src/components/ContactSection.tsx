@@ -51,7 +51,7 @@ const ContactSection = () => {
       // Показываем сообщение об успешной отправке
       toast({
         title: "Сообщение отправлено!",
-        description: "Ваше сообщение успешно отправлено на электронную почту monostud.io@yandex.ru. Мы свяжемся с вами в ближайшее время.",
+        description: "Ваше сообщение успешно отправлено. Мы свяжемся с вами в ближайшее время.",
         variant: "default",
       });
     },
@@ -75,7 +75,7 @@ const ContactSection = () => {
   const contactInfo = [
     {
       title: "Email",
-      details: ["monostud.io@yandex.ru"],
+      details: ["hello@monostudio.site"],
     },
     {
       title: "Телефон",

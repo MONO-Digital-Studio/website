@@ -22,7 +22,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         if (success) {
           res.status(200).json({ 
             success: true, 
-            message: "Сообщение успешно отправлено на monostud.io@yandex.ru",
+            message: "Сообщение успешно отправлено",
             redirectToTelegram: false  // Не перенаправляем на Telegram
           });
         } else {
