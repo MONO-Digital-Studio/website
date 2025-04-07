@@ -48,24 +48,13 @@ const ContactSection = () => {
       // Сбрасываем форму
       form.reset();
       
-      // Получаем информацию о результатах отправки
-      const emailSent = response?.emailSent;
+      // Получаем информацию о результате отправки
       const telegramSent = response?.telegramSent;
-      
-      // Формируем детальное сообщение о статусе отправки
-      let statusDetails = "";
-      if (emailSent && telegramSent) {
-        statusDetails = "Сообщение отправлено на email и в Telegram.";
-      } else if (emailSent) {
-        statusDetails = "Сообщение отправлено только на email.";
-      } else if (telegramSent) {
-        statusDetails = "Сообщение отправлено только в Telegram.";
-      }
       
       // Показываем сообщение об успешной отправке
       toast({
         title: "Сообщение отправлено!",
-        description: `Ваше сообщение успешно отправлено. ${statusDetails} Мы свяжемся с вами в ближайшее время.`,
+        description: "Ваше сообщение успешно отправлено в Telegram. Мы свяжемся с вами в ближайшее время.",
         variant: "default",
       });
     },

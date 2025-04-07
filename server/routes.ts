@@ -4,7 +4,6 @@ import { storage } from "./storage";
 import { z } from "zod";
 import { validateRequest } from "zod-express-middleware";
 import { contactFormSchema } from "../shared/schema";
-import { sendEmailViaUnisender } from "./unisender";
 import { sendMessageToTelegram } from "./telegram";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -16,26 +15,19 @@ export async function registerRoutes(app: Express): Promise<Server> {
         // Validate request body
         const validatedData = contactFormSchema.parse(req.body);
         
-        // Отправляем email через Unisender API
-        const emailSuccess = await sendEmailViaUnisender(validatedData);
-        
-        // Отправляем сообщение в Telegram
+        // Отправляем сообщение только в Telegram
         const telegramSuccess = await sendMessageToTelegram(validatedData);
         
-        // Возвращаем успешный ответ клиенту если хотя бы один из методов отправки сработал
-        if (emailSuccess || telegramSuccess) {
+        // Возвращаем ответ клиенту в зависимости от успеха отправки
+        if (telegramSuccess) {
           res.status(200).json({ 
             success: true, 
             message: "Сообщение успешно отправлено",
-            emailSent: emailSuccess,
             telegramSent: telegramSuccess
           });
           
-          // Логируем результаты отправки
-          console.log('Результаты отправки формы:', { 
-            emailSent: emailSuccess, 
-            telegramSent: telegramSuccess 
-          });
+          // Логируем результат отправки
+          console.log('Сообщение отправлено в Telegram:', telegramSuccess);
         } else {
           res.status(500).json({ 
             success: false, 
