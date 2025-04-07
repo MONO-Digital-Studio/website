@@ -25,11 +25,11 @@ const Footer = () => {
             </p>
             <div className="flex justify-center space-x-5 sm:space-x-6 mb-4">
               <a 
-                href="https://t.me/MONO_LeadsBot" 
+                href="https://t.me/studiomono" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#00FF41] hover:text-white transition-colors text-xl sm:text-2xl"
-                aria-label="Написать в Telegram бот @MONO_LeadsBot"
+                aria-label="Перейти в Telegram канал @studiomono"
               >
                 <FaTelegramPlane />
               </a>
