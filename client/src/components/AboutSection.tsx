@@ -46,7 +46,6 @@ const AboutSection = () => {
                 <div className="bg-[#0D0208] p-3 sm:p-4 md:p-6 rounded-lg border border-[#008F11] hover:border-[#00FF41] transition-all">
                   <div className="text-2xl sm:text-3xl md:text-4xl text-[#00FF41] mb-1 sm:mb-2">7+</div>
                   <div className="text-white font-bold mb-1 text-sm sm:text-base">Лет опыта</div>
-                  <div className="text-gray-400 text-xs sm:text-sm">Совокупный опыт команды</div>
                 </div>
                 <div className="bg-[#0D0208] p-3 sm:p-4 md:p-6 rounded-lg border border-[#008F11] hover:border-[#00FF41] transition-all">
                   <div className="text-2xl sm:text-3xl md:text-4xl text-[#00FF41] mb-1 sm:mb-2">100+</div>
@@ -55,12 +54,10 @@ const AboutSection = () => {
                 <div className="bg-[#0D0208] p-3 sm:p-4 md:p-6 rounded-lg border border-[#008F11] hover:border-[#00FF41] transition-all">
                   <div className="text-2xl sm:text-3xl md:text-4xl text-[#00FF41] mb-1 sm:mb-2">98%</div>
                   <div className="text-white font-bold mb-1 text-sm sm:text-base">Довольных клиентов</div>
-                  <div className="text-gray-400 text-xs sm:text-sm">Среди наших партнеров</div>
                 </div>
                 <div className="bg-[#0D0208] p-3 sm:p-4 md:p-6 rounded-lg border border-[#008F11] hover:border-[#00FF41] transition-all">
                   <div className="text-2xl sm:text-3xl md:text-4xl text-[#00FF41] mb-1 sm:mb-2">24/7</div>
                   <div className="text-white font-bold mb-1 text-sm sm:text-base">Техподдержка</div>
-                  <div className="text-gray-400 text-xs sm:text-sm">Для всех клиентов</div>
                 </div>
               </div>
             </div>
