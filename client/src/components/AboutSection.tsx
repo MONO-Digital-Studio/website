@@ -45,7 +45,7 @@ const AboutSection = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-6 md:mt-0">
                 <div className="bg-[#0D0208] p-3 sm:p-4 md:p-6 rounded-lg border border-[#008F11] hover:border-[#00FF41] transition-all">
                   <div className="text-2xl sm:text-3xl md:text-4xl text-[#00FF41] mb-1 sm:mb-2">7+</div>
-                  <div className="text-white font-bold mb-1 text-sm sm:text-base">Лет опыта</div>
+                  <div className="text-white font-bold mb-1 text-sm sm:text-base">Совокупный опыт команды</div>
                 </div>
                 <div className="bg-[#0D0208] p-3 sm:p-4 md:p-6 rounded-lg border border-[#008F11] hover:border-[#00FF41] transition-all">
                   <div className="text-2xl sm:text-3xl md:text-4xl text-[#00FF41] mb-1 sm:mb-2">100+</div>
