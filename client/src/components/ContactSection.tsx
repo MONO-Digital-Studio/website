@@ -50,7 +50,6 @@ const ContactSection = () => {
       
       // Получаем информацию о результате отправки
       const telegramSent = response?.telegramSent;
-      const supabaseSaved = response?.supabaseSaved;
       
       // Показываем сообщение об успешной отправке
       toast({
@@ -59,7 +58,7 @@ const ContactSection = () => {
         variant: "default",
       });
       
-      console.log('Результаты отправки:', { telegramSent, supabaseSaved });
+      console.log('Результат отправки в Telegram:', telegramSent);
     },
     onError: (error: any) => {
       const errorMessage = error?.response?.data?.message || 
